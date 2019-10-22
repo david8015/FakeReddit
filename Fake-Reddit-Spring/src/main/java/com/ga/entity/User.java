@@ -96,5 +96,16 @@ public class User {
 		this.posts = posts;
 	}
 	
+	@OneToMany(mappedBy = "user", cascade= CascadeType.ALL)
+	private List <Comment> comments;
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+	
 	
 }
