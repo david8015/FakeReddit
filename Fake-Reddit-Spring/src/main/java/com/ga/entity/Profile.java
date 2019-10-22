@@ -1,12 +1,10 @@
 package com.ga.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -54,16 +52,5 @@ public class Profile {
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-	
-	@OneToOne(mappedBy = "profile", cascade = CascadeType.ALL)
-	private User user;
-
-	public User getUser() {
-		return user;
-	}
-	
-	public void setUser(User user) {
-		this.user = user;
 	}
 }
