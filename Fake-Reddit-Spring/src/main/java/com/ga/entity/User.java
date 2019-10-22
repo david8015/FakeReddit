@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -106,6 +107,13 @@ public class User {
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
+	@ManyToOne(cascade = {CascadeType.DETACH,
+            CascadeType.MERGE, CascadeType.REFRESH})
+	@JoinColumn(name = "user_role_id", nullable = false)
+	private UserRole userRole;
+	    
+	public UserRole getUserRole() { return userRole; }
 	
+	public void setUserRole(UserRole userRole) { this.userRole = userRole; }
 	
 }
