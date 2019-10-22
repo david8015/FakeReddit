@@ -24,11 +24,11 @@ public class Profile {
 	public Profile() {
 	}
 
-	public Profile(int profileId, String mobile, String address) {
-		this.profileId = profileId;
-		this.mobile = mobile;
-		this.address = address;
-	}
+//	public Profile(int profileId, String mobile, String address) {
+//		this.profileId = profileId;
+//		this.mobile = mobile;
+//		this.address = address;
+//	}
 
 	public int getProfileId() {
 		return profileId;
