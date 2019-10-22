@@ -14,5 +14,4 @@ public class UserServiceImpl implements UserService {
 	public User signup(User user) {
 		return userDao.signup(user);
 	}
-
 }
