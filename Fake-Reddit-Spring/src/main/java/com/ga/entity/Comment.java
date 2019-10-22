@@ -15,6 +15,33 @@ public class Comment {
 	@Column(name="comment_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long commentId;
+	
+	@Column (nullable = false)
     private String description;
-    private String username;
+
+	public Comment() {
+	}
+
+	public Comment(Long commentId, String description) {
+		this.commentId = commentId;
+		this.description = description;
+	}
+
+	public Long getCommentId() {
+		return commentId;
+	}
+
+	public void setCommentId(Long commentId) {
+		this.commentId = commentId;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	
 }
