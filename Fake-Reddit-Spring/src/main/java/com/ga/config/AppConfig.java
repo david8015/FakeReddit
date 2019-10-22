@@ -39,7 +39,7 @@ public class AppConfig {
 
 		return dataSource;
 	}
-
+	
 	private final Properties hibernateProperties() {
 		Properties hibernateProperties = new Properties();
 
