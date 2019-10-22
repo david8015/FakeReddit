@@ -1,10 +1,16 @@
 package com.ga.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -24,12 +30,12 @@ public class Post {
 	
 	public Post() {
 	}
-
-	public Post(Long postId, String title, String description) {
-		this.postId = postId;
-		this.title = title;
-		this.description = description;
-	}
+//
+//	public Post(Long postId, String title, String description) {
+//		this.postId = postId;
+//		this.title = title;
+//		this.description = description;
+//	}
 
 	public Long getPostId() {
 		return postId;
@@ -54,5 +60,32 @@ public class Post {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+	@JoinColumn(name = "user_id", nullable = false)
+	private User user;
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	@OneToMany(mappedBy = "post", cascade= CascadeType.ALL)
+	private List <Comment> comments;
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+	
+	
+	
+	
 	
 }

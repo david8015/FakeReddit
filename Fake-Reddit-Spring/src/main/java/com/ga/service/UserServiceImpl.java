@@ -3,7 +3,7 @@ package com.ga.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ga.Dao.UserDao;
+import com.ga.dao.UserDao;
 import com.ga.entity.User;
 
 @Service

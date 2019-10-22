@@ -1,4 +1,4 @@
-package com.ga.Dao;
+package com.ga.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

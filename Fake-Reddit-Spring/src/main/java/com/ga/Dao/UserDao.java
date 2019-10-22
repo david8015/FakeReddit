@@ -1,4 +1,4 @@
-package com.ga.Dao;
+package com.ga.dao;
 import com.ga.entity.User;
 
 public interface UserDao {
