@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
 		return userDao.signup(user);
 	}
 	
-	
     @Autowired
     @Qualifier("encoder")
     PasswordEncoder bCryptPasswordEncoder;

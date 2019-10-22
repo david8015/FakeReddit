@@ -6,5 +6,4 @@ public class SecurityConfigInitializer extends AbstractSecurityWebApplicationIni
 	public SecurityConfigInitializer() {
 	       super(SecurityConfig.class);
 	   }
-
 }

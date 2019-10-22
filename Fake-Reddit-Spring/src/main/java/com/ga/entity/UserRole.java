@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "user_role")
 public class UserRole {
@@ -40,7 +42,7 @@ public class UserRole {
     public void setName(String name) {
         this.name = name;
     }
-    
+    @JsonIgnore
     @OneToMany(mappedBy = "userRole", cascade = CascadeType.ALL)
 	private List<User> users;
 	
