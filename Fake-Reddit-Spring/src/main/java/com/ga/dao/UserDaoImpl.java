@@ -41,15 +41,15 @@ public class UserDaoImpl implements UserDao {
 }
 
 	@Override
-	public User getUserByUsername(String username) {
+	public User getUserByEmail(String email) {
 		User user = null;
 		
 		Session session = sessionFactory.getCurrentSession();
 		
 		try {
 			session.beginTransaction();
-			user = (User) session.createQuery("FROM User u where u.username = '" + 
-			username + "'").uniqueResult();
+			user = (User) session.createQuery("FROM User u where u.email = '" + 
+			email + "'").uniqueResult();
 		}finally {
 			session.close();
 		}

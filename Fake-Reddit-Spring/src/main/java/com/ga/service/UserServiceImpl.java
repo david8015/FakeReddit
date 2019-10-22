@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
 	public String signup(User user) {
 		if(userDao.signup(user).getUserId() != null) {
-			UserDetails userDetails = loadUserByUsername(user.getUsername());
+			UserDetails userDetails = loadUserByUsername(user.getEmail());
 			
 			return jwtUtil.generateToken(userDetails);
 		
@@ -37,13 +37,13 @@ public class UserServiceImpl implements UserService {
     PasswordEncoder bCryptPasswordEncoder;
     
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userDao.getUserByUsername(username);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        User user = userDao.getUserByEmail(email);
 
         if(user==null)
-            throw new UsernameNotFoundException("Unkknown user: " +username);
+            throw new UsernameNotFoundException("Unkknown user: " + email);
 
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
+        return new org.springframework.security.core.userdetails.User(user.getEmail(), bCryptPasswordEncoder.encode(user.getPassword()),
                 true, true, true, true, getGrantedAuthorities(user));
     }
     
@@ -61,8 +61,8 @@ public class UserServiceImpl implements UserService {
      @Override
      public String login(User user) {
          if(userDao.login(user) != null) {
-                    UserDetails userDetails = loadUserByUsername(user.getUsername());
-                    
+                    UserDetails userDetails = loadUserByUsername(user.getEmail());
+              
              return jwtUtil.generateToken(userDetails);
             }
          return null;

@@ -3,7 +3,7 @@ import com.ga.entity.User;
 
 public interface UserDao {
 	public User signup(User user);
-	public User getUserByUsername(String username);
+	public User getUserByEmail(String email);
 	public User login(User user);
 	
 }
