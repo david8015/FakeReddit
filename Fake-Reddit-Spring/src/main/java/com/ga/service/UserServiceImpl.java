@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.ga.config.JwtUtil;
 import com.ga.dao.UserDao;
 import com.ga.entity.User;
 
@@ -20,8 +21,15 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserDao userDao;
 
-	public User signup(User user) {
-		return userDao.signup(user);
+	public String signup(User user) {
+		if(userDao.signup(user).getUserId() != null) {
+			UserDetails userDetails = loadUserByUsername(user.getUsername());
+			
+			return jwtUtil.generateToken(userDetails);
+		
+		}
+		
+		return null;
 	}
 	
     @Autowired
@@ -45,6 +53,19 @@ public class UserServiceImpl implements UserService {
         authorities.add(new SimpleGrantedAuthority(user.getUserRole().getName()));
 
         return authorities;
-    }
+        }
+
+    @Autowired
+    JwtUtil jwtUtil;
+    
+     @Override
+     public String login(User user) {
+         if(userDao.login(user) != null) {
+                    UserDetails userDetails = loadUserByUsername(user.getUsername());
+                    
+             return jwtUtil.generateToken(userDetails);
+            }
+         return null;
+     }
 
 }
