@@ -22,6 +22,8 @@ public class UserServiceImpl implements UserService {
 	UserDao userDao;
 
 	public String signup(User user) {
+	    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+
 		if(userDao.signup(user).getUserId() != null) {
 			UserDetails userDetails = loadUserByUsername(user.getEmail());
 			
@@ -41,7 +43,7 @@ public class UserServiceImpl implements UserService {
         User user = userDao.getUserByEmail(email);
 
         if(user==null)
-            throw new UsernameNotFoundException("Unkknown user: " + email);
+            throw new UsernameNotFoundException("Unknown user: " + email);
 
         return new org.springframework.security.core.userdetails.User(user.getEmail(), bCryptPasswordEncoder.encode(user.getPassword()),
                 true, true, true, true, getGrantedAuthorities(user));
@@ -60,8 +62,11 @@ public class UserServiceImpl implements UserService {
     
      @Override
      public String login(User user) {
-         if(userDao.login(user) != null) {
-                    UserDetails userDetails = loadUserByUsername(user.getEmail());
+         User foundUser = userDao.login(user);
+         if(foundUser != null &&
+                 foundUser.getUserId() != null &&
+                 bCryptPasswordEncoder.matches(user.getPassword(), foundUser.getPassword())) {
+             UserDetails userDetails = loadUserByUsername(foundUser.getEmail());
               
              return jwtUtil.generateToken(userDetails);
             }
