@@ -30,7 +30,7 @@ public class CommentDaoImpl implements CommentDao {
 		} finally {
 			session.close();
 		}
-		// TODO Auto-generated method stub
+	
 		return allComments;
 	}
 
@@ -51,6 +51,8 @@ public class CommentDaoImpl implements CommentDao {
 			
 			comment.setUser(userCommenting);
 			comment.setPost(postCommentedOn);
+			
+			postCommentedOn.getComments().add(comment);
 			
 			session.save(comment);
 
