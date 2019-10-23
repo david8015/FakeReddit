@@ -1,8 +1,11 @@
 package com.ga.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.ga.entity.Comment;
 import com.ga.entity.User;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,7 +74,7 @@ public class PostDaoImpl implements PostDao{
 			
 			session.delete(postToDelete);
 			
-			session.getTransaction();
+			session.getTransaction().commit();
 		}finally {
 			session.close();
 		}
@@ -90,11 +93,31 @@ public class PostDaoImpl implements PostDao{
 			
 			session.update(postToUpdate);
 			
-			session.getTransaction();
+			session.getTransaction().commit();
 			
 		} finally {
 			session.close();
 		}
 		return postToUpdate;
+	}
+
+	@Override
+	public List<Comment> getCommentsByPostId(Long postId) {
+		List<Comment> commentList = null;
+		Post post = null;
+
+		Session session = sessionFactory.getCurrentSession();
+
+		try{
+			session.beginTransaction();
+			post = session.get(Post.class, postId);
+			commentList = post.getComments();
+
+			Hibernate.initialize(commentList);
+		}finally {
+			session.close();
+		}
+
+		return commentList;
 	}
 }

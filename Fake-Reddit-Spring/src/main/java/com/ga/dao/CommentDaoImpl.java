@@ -58,7 +58,7 @@ public class CommentDaoImpl implements CommentDao {
 
 			session.delete(commentToDelete);
 
-			session.getTransaction();
+			session.getTransaction().commit();
 		} finally {
 			session.close();
 		}
@@ -75,9 +75,9 @@ public class CommentDaoImpl implements CommentDao {
 			commentToUpdate = session.get(Comment.class, commentId);
 			commentToUpdate.setDescription(comment.getDescription());
 			
-			session.update(comment);
+			session.update(commentToUpdate);
 			
-			session.getTransaction();
+			session.getTransaction().commit();
 			
 		} finally {
 			session.close();

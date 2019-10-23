@@ -2,6 +2,7 @@ package com.ga.controller;
 
 import java.util.List;
 
+import com.ga.entity.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +42,10 @@ public class PostController {
 		return postService.updatePost(post, postId);
 	}
 	
-	
+	@GetMapping("/{postId}/comment")
+	public List<Comment> getCommentsByPostId(@PathVariable Long postId){
+		return postService.getCommentsByPostId(postId);
+	}
 
 
 }
