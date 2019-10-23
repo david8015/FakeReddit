@@ -66,8 +66,7 @@ public class UserDaoImpl implements UserDao {
 			session.beginTransaction();
 			
 			savedUser = (User)session.createQuery("FROM User u WHERE u.email = '" + 
-				user.getEmail() + "' AND u.password = '" + 
-				user.getPassword() + "'").getSingleResult();
+				user.getEmail() + "'").getSingleResult();
 		} finally {
 			session.close();
 		}
