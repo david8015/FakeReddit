@@ -13,14 +13,19 @@ public class CommentServiceImpl implements CommentService{
 	@Autowired
 	CommentDao commentDao;
 
+	@Autowired
+	private UserService userService;
+	
+	
 	@Override
 	public List<Comment> listComments() {
 		return commentDao.listcomments();
 	}
 	
 	@Override
-	public Comment createComment(Comment comment) {
-		return commentDao.createComment(comment);
+	public Comment createComment(Comment comment, Long postId) {
+		String username = userService.returnUsername();
+		return commentDao.createComment(comment, username, postId);
 	}
 
 

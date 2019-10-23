@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,9 +25,9 @@ public class CommentController {
 		return commentService.listComments();
 	}
 	
-	@PostMapping
-	public Comment createComments(@RequestBody Comment comment) {
-		return commentService.createComment(comment);
+	@PostMapping("/{postId}")
+	public Comment createComments(@RequestBody Comment comment, @PathVariable Long postId) {
+		return commentService.createComment(comment, postId);
 		
 	}
 

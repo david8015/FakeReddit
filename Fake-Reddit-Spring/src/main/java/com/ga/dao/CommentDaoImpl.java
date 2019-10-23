@@ -34,7 +34,7 @@ public class CommentDaoImpl implements CommentDao {
 	}
 
 	@Override
-	public Comment createComment(Comment comment) {
+	public Comment createComment(Comment comment, String username, Long postId) {
 		Session session = sessionFactory.getCurrentSession();
 
 		try {
