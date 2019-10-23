@@ -18,42 +18,25 @@ public class CommentDaoImpl implements CommentDao {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public List<Comment> listcomments() {
-		List<Comment> allComments = null;
-
-		Session session = sessionFactory.getCurrentSession();
-
-		try {
-			session.beginTransaction();
-
-			allComments = session.createQuery("FROM Comment").getResultList();
-		} finally {
-			session.close();
-		}
-	
-		return allComments;
-	}
-
-	@Override
 	public Comment createComment(Comment comment, String username, Long postId) {
 		Session session = sessionFactory.getCurrentSession();
-		
+
 		User userCommenting = null;
 		Post postCommentedOn = null;
 
 		try {
 			session.beginTransaction();
-			
-			userCommenting = (User) session.createQuery("FROM User u where u.username = '" +
-					username + "'").uniqueResult();
+
+			userCommenting = (User) session.createQuery("FROM User u where u.username = '" + username + "'")
+					.uniqueResult();
 
 			postCommentedOn = session.get(Post.class, postId);
-			
+
 			comment.setUser(userCommenting);
 			comment.setPost(postCommentedOn);
-			
+
 			postCommentedOn.getComments().add(comment);
-			
+
 			session.save(comment);
 
 			session.getTransaction().commit();
@@ -62,5 +45,25 @@ public class CommentDaoImpl implements CommentDao {
 		}
 
 		return comment;
+	}
+
+	@Override
+	public Long deleteCommentById(Long commentId) {
+		Session session = sessionFactory.getCurrentSession();
+
+		Comment commentToDelete = null;
+
+		try {
+			session.beginTransaction();
+
+			commentToDelete = session.get(Comment.class, commentId);
+
+			session.delete(commentToDelete);
+
+			session.getTransaction();
+		} finally {
+			session.close();
+		}
+		return commentToDelete.getCommentId();
 	}
 }

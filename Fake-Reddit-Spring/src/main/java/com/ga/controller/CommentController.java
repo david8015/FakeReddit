@@ -3,6 +3,7 @@ package com.ga.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,15 +21,15 @@ public class CommentController {
 	@Autowired
 	CommentService commentService;
 	
-	@GetMapping("/list")
-	public List <Comment> listComments(){
-		return commentService.listComments();
-	}
 	
 	@PostMapping("/{postId}")
 	public Comment createComments(@RequestBody Comment comment, @PathVariable Long postId) {
 		return commentService.createComment(comment, postId);
 		
+	}
+	@DeleteMapping("/{commentId}")
+	public Long deleteByCommentId(@PathVariable Long commentId) {
+		return commentService.deleteCommentById(commentId);
 	}
 
 }
