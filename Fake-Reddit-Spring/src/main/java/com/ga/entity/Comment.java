@@ -67,8 +67,10 @@ public class Comment {
 		return post;
 	}
 
-	public void sertPost(Post post) {
+	public void setPost(Post post) {
 		this.post = post;
 	}
+
+	
 	
 }

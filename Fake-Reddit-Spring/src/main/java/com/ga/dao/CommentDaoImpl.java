@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.ga.entity.Comment;
 import com.ga.entity.Post;
+import com.ga.entity.User;
 
 @Repository
 public class CommentDaoImpl implements CommentDao {
@@ -36,10 +37,21 @@ public class CommentDaoImpl implements CommentDao {
 	@Override
 	public Comment createComment(Comment comment, String username, Long postId) {
 		Session session = sessionFactory.getCurrentSession();
+		
+		User userCommenting = null;
+		Post postCommentedOn = null;
 
 		try {
 			session.beginTransaction();
+			
+			userCommenting = (User) session.createQuery("FROM User u where u.username = '" +
+					username + "'").uniqueResult();
 
+			postCommentedOn = session.get(Post.class, postId);
+			
+			comment.setUser(userCommenting);
+			comment.setPost(postCommentedOn);
+			
 			session.save(comment);
 
 			session.getTransaction().commit();
