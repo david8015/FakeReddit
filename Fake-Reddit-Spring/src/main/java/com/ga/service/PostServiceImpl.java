@@ -2,6 +2,7 @@ package com.ga.service;
 
 import java.util.List;
 
+import com.ga.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,10 @@ import com.ga.entity.Post;
 public class PostServiceImpl implements PostService{
 	
 	@Autowired
-	PostDao postDao;
+	private PostDao postDao;
+
+	@Autowired
+	private UserService userService;
 
 	@Override
 	public List<Post> listPosts() {
@@ -21,7 +25,8 @@ public class PostServiceImpl implements PostService{
 	
 	@Override
 	public Post createPost(Post post) {
-		return postDao.createPost(post);
+		String username = userService.returnUsername();
+		return postDao.createPost(post, username);
 		
 	}
 

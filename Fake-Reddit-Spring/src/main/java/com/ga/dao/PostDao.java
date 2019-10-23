@@ -6,5 +6,5 @@ import com.ga.entity.Post;
 
 public interface PostDao {
 	public List<Post> listPosts();
-	public Post createPost(Post post);
+	public Post createPost(Post post, String username);
 }

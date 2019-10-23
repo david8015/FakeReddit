@@ -10,8 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import com.ga.entity.Post;
 
-import javax.servlet.http.HttpSession;
-
 @Repository
 public class PostDaoImpl implements PostDao{
 	
@@ -40,19 +38,16 @@ public class PostDaoImpl implements PostDao{
 	UserDao userDao;
 
 	@Override
-	public Post createPost(Post post) {
-
+	public Post createPost(Post post, String username) {
 		User user = null;
-
-
 		Session session = sessionFactory.getCurrentSession();
 
 
 		try {
 			session.beginTransaction();
-			user = (User)session.createQuery("FROM User u WHERE u.email = '" +
-					userDao.getUserByEmail() + "'").uniqueResult();
-
+			user = (User) session.createQuery("FROM User u where u.username = '" +
+					username + "'").uniqueResult();
+			post.setUser(user);
 			session.save(post);
 
 			session.getTransaction().commit();
@@ -62,6 +57,4 @@ public class PostDaoImpl implements PostDao{
 
 		return post;
 	}
-
-	
 }

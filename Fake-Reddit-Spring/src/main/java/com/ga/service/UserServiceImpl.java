@@ -21,6 +21,8 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserDao userDao;
 
+    private String username;
+
 	public String signup(User user) {
 	    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
@@ -41,6 +43,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userDao.getUserByEmail(email);
+
+        username = user.getUsername();
 
         if(user==null)
             throw new UsernameNotFoundException("Unknown user: " + email);
@@ -71,6 +75,10 @@ public class UserServiceImpl implements UserService {
              return jwtUtil.generateToken(userDetails);
             }
          return null;
+     }
+
+     public String returnUsername(){
+         return username;
      }
 
 }
