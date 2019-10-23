@@ -30,4 +30,15 @@ public class PostServiceImpl implements PostService{
 		
 	}
 
+	@Override
+	public Long DeletePostById(Long postId) {
+		return postDao.DeletePostByPostId(postId);
+		
+	}
+
+	@Override
+	public Post updatePost(Post post, Long postId) {
+		return postDao.updatePost(post, postId);
+	}
+
 }
