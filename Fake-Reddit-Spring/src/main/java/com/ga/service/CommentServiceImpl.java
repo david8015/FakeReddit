@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.ga.dao.CommentDao;
 import com.ga.entity.Comment;
+import com.ga.entity.Post;
 
 @Service
 public class CommentServiceImpl implements CommentService{
@@ -29,6 +30,13 @@ public class CommentServiceImpl implements CommentService{
 	@Override
 	public Long deleteCommentById(Long commentId) {
 		return commentDao.deleteCommentById(commentId);
+	}
+
+
+
+	@Override
+	public Comment updateComment(Comment comment, Long commentId) {
+		return commentDao.updateComment(comment, commentId);
 	}
 
 

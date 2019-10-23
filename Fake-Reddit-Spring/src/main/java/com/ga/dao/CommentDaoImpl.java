@@ -1,7 +1,5 @@
 package com.ga.dao;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,5 +63,25 @@ public class CommentDaoImpl implements CommentDao {
 			session.close();
 		}
 		return commentToDelete.getCommentId();
+	}
+
+	@Override
+	public Comment updateComment(Comment comment, Long commentId) {
+		Comment commentToUpdate = null;
+		Session session = sessionFactory.getCurrentSession();
+		
+		try {
+			session.beginTransaction();
+			commentToUpdate = session.get(Comment.class, commentId);
+			commentToUpdate.setDescription(comment.getDescription());
+			
+			session.update(comment);
+			
+			session.getTransaction();
+			
+		} finally {
+			session.close();
+		}
+		return commentToUpdate;
 	}
 }
