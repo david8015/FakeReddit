@@ -21,6 +21,9 @@ public class Profile {
 	@Column
 	private String address;
 
+	@Column(name="additional_email")
+	private String additionalEmail;
+
 	public Profile() {
 	}
 
@@ -38,6 +41,14 @@ public class Profile {
 		this.profileId = profileId;
 	}
 
+	public String getAdditionalEmail() {
+		return additionalEmail;
+	}
+
+	public void setAdditionalEmail(String additionalEmail) {
+		this.additionalEmail = additionalEmail;
+	}
+
 	public String getMobile() {
 		return mobile;
 	}
@@ -53,4 +64,5 @@ public class Profile {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 }

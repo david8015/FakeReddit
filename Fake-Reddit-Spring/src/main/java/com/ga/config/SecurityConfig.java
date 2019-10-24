@@ -65,6 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/post/**").authenticated()
 				.antMatchers("/comment/**").authenticated()
             	.antMatchers("/user/**").authenticated()
+				.antMatchers("/profile/**").authenticated()
 //            .antMatchers("/role/**", "/user/**").hasRole("USER")
             .and()
             .httpBasic()
