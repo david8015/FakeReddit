@@ -1,5 +1,6 @@
 package com.ga.dao;
 
+import com.ga.entity.Comment;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import com.ga.entity.User;
 import com.ga.entity.UserRole;
+
+import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -72,5 +75,10 @@ public class UserDaoImpl implements UserDao {
 		}
 		
 		return savedUser;
+	}
+
+	@Override
+	public List<Comment> getCommentByUser(User user) {
+		return null;
 	}
 }

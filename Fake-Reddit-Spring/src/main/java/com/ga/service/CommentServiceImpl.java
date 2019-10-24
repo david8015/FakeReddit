@@ -11,6 +11,7 @@ import com.ga.entity.Post;
 
 @Service
 public class CommentServiceImpl implements CommentService{
+
 	@Autowired
 	CommentDao commentDao;
 

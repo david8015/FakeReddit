@@ -18,6 +18,7 @@ import com.ga.entity.User;
 
 @Service
 public class UserServiceImpl implements UserService {
+
 	@Autowired
 	UserDao userDao;
 

@@ -37,6 +37,7 @@ public class PostController {
 	public Long deletePostById(@PathVariable Long postId) {
 		return postService.DeletePostById(postId);
 	}
+
 	@PutMapping("/{postId}")
 	public Post updatePost(@RequestBody Post post, @PathVariable Long postId) {
 		return postService.updatePost(post, postId);
