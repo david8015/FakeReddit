@@ -23,7 +23,6 @@ public class CommentController {
 	@Autowired
 	CommentService commentService;
 	
-	
 	@PostMapping("/{postId}")
 	public Comment createComments(@RequestBody Comment comment, @PathVariable Long postId) {
 		return commentService.createComment(comment, postId);
