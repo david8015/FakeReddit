@@ -1,9 +1,12 @@
 package com.ga.service;
 
+import com.ga.entity.Comment;
 import com.ga.entity.Response;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import com.ga.entity.User;
+
+import java.util.List;
 
 
 public interface UserService extends UserDetailsService{
@@ -14,6 +17,8 @@ public interface UserService extends UserDetailsService{
 	public Response login (User user);
 
 	public String returnUsername();
+
+	public List<Comment> getCommentsByUser(User user);
 	
 	
 }

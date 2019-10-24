@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.ga.entity.User;
 //import com.ga.entity.UserRole;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -78,7 +79,22 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<Comment> getCommentByUser(User user) {
-		return null;
+	public List<Comment> getCommentByUser(String username) {
+		List<Comment> commentList = new ArrayList<>();
+		User user = null;
+
+		Session session = sessionFactory.getCurrentSession();
+
+		try{
+			session.beginTransaction();
+			user = (User)session.createQuery("FROM User u WHERE u.username = '" +
+					user.getUsername() + "'").getSingleResult();
+			commentList = user.getComments();
+		} finally {
+			session.close();
+		}
+
+
+		return commentList;
 	}
 }
