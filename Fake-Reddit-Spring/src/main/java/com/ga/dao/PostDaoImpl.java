@@ -1,6 +1,5 @@
 package com.ga.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.ga.entity.Comment;
@@ -78,7 +77,7 @@ public class PostDaoImpl implements PostDao{
 		}finally {
 			session.close();
 		}
-		return postToDelete.getPostId();
+		return postToDelete.getId();
 	}
 
 	@Override
