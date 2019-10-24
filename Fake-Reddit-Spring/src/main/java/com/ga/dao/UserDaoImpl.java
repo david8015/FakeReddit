@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ga.entity.User;
-import com.ga.entity.UserRole;
+//import com.ga.entity.UserRole;
 
 import java.util.List;
 
@@ -17,21 +17,21 @@ public class UserDaoImpl implements UserDao {
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	@Autowired
-	UserRoleDao userRoleDao;
-	
+//	@Autowired
+//	UserRoleDao userRoleDao;
+//
 	@Override
 	public User signup(User user) {
-//		String roleName = user.getUserRole().getName();
+		//String roleName = user.getUserRole().getName();
 		
-//		UserRole userRole = userRoleDao.getRole(roleName);
+		//UserRole userRole = userRoleDao.getRole(roleName);
 		
 		Session session = sessionFactory.getCurrentSession();
 		
 		try {
 			session.beginTransaction();
 			
-//			user.setUserRole(userRole);
+			user.setRole("USER");
 			
 			session.save(user);
 			

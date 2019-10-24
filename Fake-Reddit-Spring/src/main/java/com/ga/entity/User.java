@@ -19,30 +19,41 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name="users")
 public class User {
-	
+
 	@Id
-	@Column(name="user_id")
+	@Column(name = "user_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
-	
+
 	@Column(nullable = false, unique = true)
 	private String email;
-	
+
 	@Column(nullable = false, unique = true)
 	private String username;
-	
+
 	@Column(nullable = false)
 	private String password;
-	
+
+	@Column //(columnDefinition = "String default USER")
+	private String role = "USER";
+
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	public User() {
 	}
 
-	public User(Long userId, String email, String password) {
-		super();
-		this.userId = userId;
-		this.email = email;
-		this.password = password;
-	}
+
+//	public User(Long userId, String email, String password) {
+//		super();
+//		this.userId = userId;
+//		this.email = email;
+//		this.password = password;
+//	}
 
 	public Long getUserId() {
 		return userId;
@@ -67,7 +78,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -75,7 +86,7 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "profile_id")
 	private Profile profile;
@@ -87,10 +98,10 @@ public class User {
 	public void setProfile(Profile profile) {
 		this.profile = profile;
 	}
-	
+
 	@JsonIgnore
-	@OneToMany(mappedBy = "user", cascade= CascadeType.ALL)
-	private List <Post> posts;
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	private List<Post> posts;
 
 	public List<Post> getPosts() {
 		return posts;
@@ -99,10 +110,10 @@ public class User {
 	public void setPosts(List<Post> posts) {
 		this.posts = posts;
 	}
-	
+
 	@JsonIgnore
-	@OneToMany(mappedBy = "user", cascade= CascadeType.ALL)
-	private List <Comment> comments;
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	private List<Comment> comments;
 
 	public List<Comment> getComments() {
 		return comments;
@@ -111,14 +122,15 @@ public class User {
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
-
-	@ManyToOne(cascade = {CascadeType.DETACH,
-            CascadeType.MERGE, CascadeType.REFRESH})
-	@JoinColumn(name = "user_role_id")
-	private UserRole userRole;
-	    
-	public UserRole getUserRole() { return userRole; }
-	
-	public void setUserRole(UserRole userRole) { this.userRole = userRole; }
-	
 }
+
+//	@ManyToOne(cascade = {CascadeType.DETACH,
+//            CascadeType.MERGE, CascadeType.REFRESH})
+//	@JoinColumn(name = "user_role_id")
+//	private UserRole userRole;
+//
+//	public UserRole getUserRole() { return userRole; }
+//
+//	public void setUserRole(UserRole userRole) { this.userRole = userRole; }
+//
+//}
