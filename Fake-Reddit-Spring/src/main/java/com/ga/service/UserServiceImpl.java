@@ -3,6 +3,7 @@ package com.ga.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ga.entity.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
@@ -50,7 +51,7 @@ public class UserServiceImpl implements UserService {
         if(user==null)
             throw new UsernameNotFoundException("Unknown user: " + email);
 
-        return new org.springframework.security.core.userdetails.User(user.getEmail(), bCryptPasswordEncoder.encode(user.getPassword()),
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
                 true, true, true, true, getGrantedAuthorities(user));
     }
     
@@ -66,14 +67,19 @@ public class UserServiceImpl implements UserService {
     JwtUtil jwtUtil;
     
      @Override
-     public String login(User user) {
+     public Response login(User user) {
+
+         Response response = new Response();
          User foundUser = userDao.login(user);
          if(foundUser != null &&
                  foundUser.getUserId() != null &&
                  bCryptPasswordEncoder.matches(user.getPassword(), foundUser.getPassword())) {
              UserDetails userDetails = loadUserByUsername(foundUser.getEmail());
-              
-             return jwtUtil.generateToken(userDetails);
+             response.setToken(jwtUtil.generateToken(userDetails));
+             response.setUsername(foundUser.getUsername());
+
+             return response;
+             //return jwtUtil.generateToken(userDetails);
             }
          return null;
      }

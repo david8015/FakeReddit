@@ -13,7 +13,7 @@ public class Profile {
 	@Id
 	@Column(name="profile_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int profileId;
+	private Long profileId;
 	
 	@Column
 	private String mobile;
@@ -34,7 +34,7 @@ public class Profile {
 		return profileId;
 	}
 
-	public void setProfileId(int profileId) {
+	public void setProfileId(long profileId) {
 		this.profileId = profileId;
 	}
 

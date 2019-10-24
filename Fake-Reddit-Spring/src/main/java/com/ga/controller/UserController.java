@@ -1,5 +1,6 @@
 package com.ga.controller;
 
+import com.ga.entity.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,8 +30,13 @@ public class UserController {
             return ResponseEntity.ok(new JwtResponse(userService.signup(user)));
         }
 	
+//	@PostMapping("/login")
+//	   public ResponseEntity<?> login(@RequestBody User user) {
+//	       return ResponseEntity.ok(new JwtResponse(userService.login(user)));
+//	   }
 	@PostMapping("/login")
-	   public ResponseEntity<?> login(@RequestBody User user) {
-	       return ResponseEntity.ok(new JwtResponse(userService.login(user)));
-	   }
+	public Response login(@RequestBody User user){
+		return userService.login(user);
+
+	}
 }

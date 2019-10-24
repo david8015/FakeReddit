@@ -1,5 +1,6 @@
 package com.ga.service;
 
+import com.ga.entity.Response;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import com.ga.entity.User;
@@ -10,7 +11,7 @@ public interface UserService extends UserDetailsService{
 
 	//UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
 	
-	public String login (User user);
+	public Response login (User user);
 
 	public String returnUsername();
 	
