@@ -22,16 +22,16 @@ public class UserDaoImpl implements UserDao {
 	
 	@Override
 	public User signup(User user) {
-		String roleName = user.getUserRole().getName();
+//		String roleName = user.getUserRole().getName();
 		
-		UserRole userRole = userRoleDao.getRole(roleName);
+//		UserRole userRole = userRoleDao.getRole(roleName);
 		
 		Session session = sessionFactory.getCurrentSession();
 		
 		try {
 			session.beginTransaction();
 			
-			user.setUserRole(userRole);
+//			user.setUserRole(userRole);
 			
 			session.save(user);
 			

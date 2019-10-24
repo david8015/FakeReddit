@@ -111,6 +111,7 @@ public class User {
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
+
 	@ManyToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE, CascadeType.REFRESH})
 	@JoinColumn(name = "user_role_id")
