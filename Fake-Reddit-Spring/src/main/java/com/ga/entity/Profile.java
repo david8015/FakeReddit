@@ -30,7 +30,7 @@ public class Profile {
 //		this.address = address;
 //	}
 
-	public int getProfileId() {
+	public Long getProfileId() {
 		return profileId;
 	}
 

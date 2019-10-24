@@ -42,4 +42,48 @@ public class ProfileDaoImpl implements ProfileDao {
         return user.getProfile();
     }
 
+    @Override
+    public Long deleteProfileById(Long profileId) {
+        Session session = sessionFactory.getCurrentSession();
+
+        Profile profileToDelete = null;
+
+        try {
+            session.beginTransaction();
+
+            profileToDelete = session.get(Profile.class, profileId);
+
+            session.delete(profileToDelete);
+
+            session.getTransaction().commit();
+
+
+        } finally {
+            session.close();
+        }
+        return profileToDelete.getProfileId();
+    }
+
+    @Override
+    public Profile updateProfile(Profile profile, Long profileId) {
+        Profile profileToUpdate = null;
+        Session session = sessionFactory.getCurrentSession();
+
+        try {
+            session.beginTransaction();
+            profileToUpdate = session.get(Profile.class, profileId);
+            profileToUpdate.setAddress(profile.getAddress());
+            profileToUpdate.setMobile(profile.getAddress());
+
+
+            session.update(profileToUpdate);
+
+            session.getTransaction().commit();
+
+        } finally {
+            session.close();
+        }
+        return profileToUpdate;
+    }
+
 }
