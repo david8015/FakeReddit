@@ -62,7 +62,7 @@ public class CommentDaoImpl implements CommentDao {
 		} finally {
 			session.close();
 		}
-		return commentToDelete.getCommentId();
+		return commentToDelete.getId();
 	}
 
 	@Override

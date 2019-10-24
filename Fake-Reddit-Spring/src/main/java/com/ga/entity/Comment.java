@@ -30,11 +30,11 @@ public class Comment {
 		this.description = description;
 	}
 
-	public Long getCommentId() {
+	public Long getId() {
 		return commentId;
 	}
 
-	public void setCommentId(Long commentId) {
+	public void setId(Long commentId) {
 		this.commentId = commentId;
 	}
 
