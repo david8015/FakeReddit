@@ -19,7 +19,7 @@ public interface UserService extends UserDetailsService{
 
 	public String returnUsername();
 
-	public List<Comment> getCommentsByUser(User user);
+	public List<Comment> getCommentsByUser(String email);
 
 	List<Post> getPostsByUser(User user);
 }

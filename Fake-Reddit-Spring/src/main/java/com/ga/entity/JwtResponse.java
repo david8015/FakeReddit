@@ -2,14 +2,14 @@ package com.ga.entity;
 
 public class JwtResponse {
 
-	private String jwt;
+	private String token;
 
 	public JwtResponse(String jwt) {
-		this.jwt = jwt;
+		this.token = jwt;
 	}
 
 	public String getToken() {
-		return this.jwt;
+		return this.token;
 	}
 
 }

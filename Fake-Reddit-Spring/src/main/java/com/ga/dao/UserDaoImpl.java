@@ -81,7 +81,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<Comment> getCommentByUser(User user) {
+	public List<Comment> getCommentByUser(String email) {
 		List<Comment> commentList = null;
 		User user2;
 
@@ -90,7 +90,7 @@ public class UserDaoImpl implements UserDao {
 		try{
 			session.beginTransaction();
 			user2 = (User)session.createQuery("FROM User u WHERE u.email = '" +
-					user.getEmail() + "'").getSingleResult();
+					email + "'").getSingleResult();
 			commentList = user2.getComments();
 			Hibernate.initialize(commentList);
 

@@ -4,6 +4,7 @@ import com.ga.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,19 +30,15 @@ public class UserController {
     public ResponseEntity<?> signup(@RequestBody User user) {
             return ResponseEntity.ok(new JwtResponse(userService.signup(user)));
         }
-	
-//	@PostMapping("/login")
-//	   public ResponseEntity<?> login(@RequestBody User user) {
-//	       return ResponseEntity.ok(new JwtResponse(userService.login(user)));
-//	   }
+
 	@PostMapping("/login")
 	public Response login(@RequestBody User user){
 		return userService.login(user);
 	}
 
-	@GetMapping("/comments")
-	public List<Comment> getCommentByUser(@RequestBody User user){
-		return userService.getCommentsByUser(user);
+	@GetMapping("/comments/{email}")
+	public List<Comment> getCommentByUser(@PathVariable String email){
+		return userService.getCommentsByUser(email);
 	}
 
 	@GetMapping("/posts")

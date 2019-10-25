@@ -1,11 +1,12 @@
-package java.com.ga.controller;
+package com.ga.controller;
 
-import com.ga.controller.UserController;
-import com.ga.entity.Response;
-import com.ga.service.UserService;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.Request;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -16,10 +17,9 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import static org.mockito.Mockito.when;
-import static org.mockito.ArgumentMatchers.any;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import com.ga.entity.Comment;
+import com.ga.entity.Response;
+import com.ga.service.UserService;
 
 
 @RunWith(MockitoJUnitRunner.class) //execute JUnit using Mockito's testing support
@@ -27,27 +27,19 @@ public class UserControllerTest {
 
     private MockMvc mockMvc;
 
+    @Mock
+    UserService userService;
+
     @InjectMocks
     UserController userController; //instructs mockito to create mocks versions of them
+    
+    @InjectMocks
+    Response response;
 
     @Before
     public void init(){
         mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
     }
-
-    @Test
-    public void helloworld_HelloWorld_Success() throws Exception{
-        RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/user/hello")
-                .accept(MediaType.APPLICATION_JSON);
-
-        mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
-                .andExpect(content().string("Hello World!!"));
-    }
-
-    @Mock
-    UserService userService;
 
     @Test
     public void signup_User_Success() throws Exception{
@@ -60,26 +52,21 @@ public class UserControllerTest {
 
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
-                .andExpect(content().json("\token\":\"2468\"}"))
-                .andReturn();
+                .andExpect(content().json("{\"token\":\"2468\"}"));
+           
 
     }
-
-    private static String createUserInJson(String username, String password, String email){
-        return "{\"username\":\"" + username + "\", " +
-                "\"password\":\"" + password + "\", " +
-                "\"email\":\"" + email + "\"}";
-    }
-
-    @Mock
-    Response response;
+    
 
     @Test
     public void login_User_Success() throws Exception{
+        response.setToken("king");
+        response.setUsername("test");
+
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/user/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(createResponseInJson("kingfferf", "test2434"));
+                .content(createUserInJson("king", "test2434", "king@test.com"));
 
         when(userService.login(any())).thenReturn(response);
 
@@ -88,11 +75,42 @@ public class UserControllerTest {
                 .andExpect(content().json("{\"token\":\"king\",\"username\":\"test\"}"));
 
     }
+    
+    private static String createUserInJson(String username, String password, String email){
+        return "{\"username\":\"" + username + "\", " +
+                "\"password\":\"" + password + "\", " +
+                "\"email\":\"" + email + "\"}";
+    }
+
 
     public static String createResponseInJson(String token, String username){
         return  "{\"token\":\"" + token + "\", " +
                     "\"username\":\"" + username + "\"}";
 
     }
-
+    
+    @InjectMocks
+     Comment comment;
+    
+    
+//    @Test
+//    public void getCommentByUser_Success() throws Exception {
+//    	List<Comment> commentList = new ArrayList<Comment>();
+//    	comment.setId(1L);
+//    	comment.setDescription("test comment1");
+//    	commentList.add(comment);
+//    
+//    	RequestBuilder requestBuilder = MockMvcRequestBuilders
+//                .get("/user/comments/test@comment.com")
+//                .accept(MediaType.APPLICATION_JSON);
+//    	
+//    	when(userService.getCommentsByUser(any())).thenReturn(commentList);
+//    	
+//    	MvcResult result = mockMvc.perform(requestBuilder)
+//					    	.andExpect(status().isOk())
+//					    	.andReturn();
+//    	
+//    	System.out.println(result.getResponse().getContentAsString());
+//    	
+//    }
 }
