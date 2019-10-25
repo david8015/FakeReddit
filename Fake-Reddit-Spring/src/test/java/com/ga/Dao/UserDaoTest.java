@@ -6,10 +6,11 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-
+import static org.mockito.ArgumentMatchers.anyString;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -43,6 +44,9 @@ public class UserDaoTest {
 	@Mock
      Transaction transaction;
 	
+	@Mock
+	Query<User> query;
+	
 	@Before
 	public void initializeDummyObjects() {
 		user.setUserId(1L);
@@ -64,5 +68,14 @@ public class UserDaoTest {
 		assertEquals(savedUser, user);
 	}
 	
-	
+	@Test
+	public void login_user_Success() {
+		when(session.createQuery(anyString())).thenReturn(query);
+		when(query.getSingleResult()).thenReturn(user);
+		
+		User savedUser = userDao.login(user);
+		
+		assertNotNull("expected not null", savedUser);
+		assertEquals(savedUser, user);
+	}
 }
