@@ -91,8 +91,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<Comment> getCommentsByUser(User user) {
-         String username = user.getUsername();
-        return userDao.getCommentByUser(username);
+        // String username = user.getUsername();
+        return userDao.getCommentByUser(user);
     }
 
 }

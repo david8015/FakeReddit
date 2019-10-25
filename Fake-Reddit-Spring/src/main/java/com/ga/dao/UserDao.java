@@ -8,5 +8,5 @@ public interface UserDao {
 	public User signup(User user);
 	public User getUserByEmail(String email);
 	public User login(User user);
-	public List<Comment> getCommentByUser(String username);
+	public List<Comment> getCommentByUser(User user);
 }

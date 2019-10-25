@@ -7,8 +7,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Fake-Reddit-Spring/target/m2e-wtp/web-resources/META-INF/maven/com.ga/Fake-Reddit-Spring/pom.xml" />
-        <option value="$PROJECT_DIR$/Fake-Reddit-Spring/target/m2e-wtp/web-resources/META-INF/maven/com.ga/Fake-Reddit-Spring/pom.properties" />
         <option value="$PROJECT_DIR$/Fake-Reddit-Spring/pom.xml" />
       </list>
     </option>

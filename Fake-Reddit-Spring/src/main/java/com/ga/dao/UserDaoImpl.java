@@ -1,6 +1,7 @@
 package com.ga.dao;
 
 import com.ga.entity.Comment;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,17 +80,19 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<Comment> getCommentByUser(String username) {
+	public List<Comment> getCommentByUser(User user) {
 		List<Comment> commentList = new ArrayList<>();
-		User user = null;
+		User user2 = null;
 
 		Session session = sessionFactory.getCurrentSession();
 
 		try{
 			session.beginTransaction();
-			user = (User)session.createQuery("FROM User u WHERE u.username = '" +
-					user.getUsername() + "'").getSingleResult();
-			commentList = user.getComments();
+			user2 = (User)session.createQuery("FROM User u WHERE u.email = '" +
+					user.getEmail() + "'").getSingleResult();
+			commentList = user2.getComments();
+			Hibernate.initialize(commentList);
+
 		} finally {
 			session.close();
 		}

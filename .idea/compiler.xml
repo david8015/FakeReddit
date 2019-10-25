@@ -6,9 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Fake-Reddit-Spring (1)" />
-        <module name="Fake-Reddit-Spring (3)" />
-        <module name="Fake-Reddit-Spring (2)" />
+        <module name="Fake-Reddit-Spring" />
       </profile>
     </annotationProcessing>
   </component>
