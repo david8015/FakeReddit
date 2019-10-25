@@ -86,7 +86,6 @@ public class UserControllerTest {
     public static String createResponseInJson(String token, String username){
         return  "{\"token\":\"" + token + "\", " +
                     "\"username\":\"" + username + "\"}";
-
     }
     
     @InjectMocks

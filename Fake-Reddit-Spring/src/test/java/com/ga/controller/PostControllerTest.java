@@ -41,16 +41,15 @@ public class PostControllerTest {
 	Post post;
 
 	@InjectMocks
-	List<Post> posts;
-
-	@InjectMocks
 	Comment comment;
-
-	@InjectMocks
+	
 	List<Comment> comments;
+	List<Post> posts;
 
 	@Mock
 	PostService postService;
+	
+	
 
 	@Before
 	public void init() {
@@ -87,7 +86,6 @@ public class PostControllerTest {
 		mockMvc.perform(requestBuilder)
 			.andExpect(status().isOk())
 			.andExpect(content().string(listOfPostsMapper));
-		
 	}
 	
 	     
