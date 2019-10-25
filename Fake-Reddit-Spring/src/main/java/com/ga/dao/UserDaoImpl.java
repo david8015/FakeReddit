@@ -1,6 +1,7 @@
 package com.ga.dao;
 
 import com.ga.entity.Comment;
+import com.ga.entity.Post;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -81,8 +82,8 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public List<Comment> getCommentByUser(User user) {
-		List<Comment> commentList = new ArrayList<>();
-		User user2 = null;
+		List<Comment> commentList = null;
+		User user2;
 
 		Session session = sessionFactory.getCurrentSession();
 
@@ -99,5 +100,27 @@ public class UserDaoImpl implements UserDao {
 
 
 		return commentList;
+	}
+
+	@Override
+	public List<Post> gePostsByUser(User user) {
+		List<Post> postList= null;
+		User user2 = null;
+
+		Session session = sessionFactory.getCurrentSession();
+
+		try{
+			session.beginTransaction();
+			user2 = (User)session.createQuery("FROM User u WHERE u.email = '" +
+					user.getEmail() + "'").getSingleResult();
+			postList = user2.getPosts();
+			Hibernate.initialize(postList);
+
+		} finally {
+			session.close();
+		}
+
+
+		return postList;
 	}
 }

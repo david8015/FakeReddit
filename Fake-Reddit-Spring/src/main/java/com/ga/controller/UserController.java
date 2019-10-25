@@ -1,7 +1,6 @@
 package com.ga.controller;
 
-import com.ga.entity.Comment;
-import com.ga.entity.Response;
+import com.ga.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ga.entity.JwtResponse;
-import com.ga.entity.User;
 import com.ga.service.UserService;
 
 import java.util.List;
@@ -42,8 +39,11 @@ public class UserController {
 		return userService.login(user);
 	}
 
-	@GetMapping("/comment")
+	@GetMapping("/comments")
 	public List<Comment> getCommentByUser(@RequestBody User user){
 		return userService.getCommentsByUser(user);
 	}
+
+	@GetMapping("/posts")
+	public List<Post> getPostsByUser(@RequestBody User user){return userService.getPostsByUser(user);}
 }

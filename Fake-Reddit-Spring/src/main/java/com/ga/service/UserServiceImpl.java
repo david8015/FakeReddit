@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ga.entity.Comment;
+import com.ga.entity.Post;
 import com.ga.entity.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -93,6 +94,11 @@ public class UserServiceImpl implements UserService {
     public List<Comment> getCommentsByUser(User user) {
         // String username = user.getUsername();
         return userDao.getCommentByUser(user);
+    }
+
+    @Override
+    public List<Post> getPostsByUser(User user) {
+        return userDao.gePostsByUser(user);
     }
 
 }
