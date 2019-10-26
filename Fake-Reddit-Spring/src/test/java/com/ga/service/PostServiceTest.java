@@ -80,7 +80,7 @@ public class PostServiceTest {
 	}
 
 	@Test
-	public void upodatePost_success() {
+	public void updatePost_success() {
 
 		when(postDao.updatePost(any(), anyLong())).thenReturn(post);
 

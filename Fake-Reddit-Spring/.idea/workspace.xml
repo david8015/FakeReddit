@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d2ad8ac-0461-4dac-abda-7d9d0708c09f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java" afterDir="false" />
     </list>
@@ -13,22 +14,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$com_ga_controller_in_Fake_Reddit_Spring.ic" NAME="com.ga.controller in Fake-Reddit-Spring Coverage Results" MODIFIED="1572116251270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.controller.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest.ic" NAME="PostServiceTest Coverage Results" MODIFIED="1572115787583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$com_ga_Dao_in_Fake_Reddit_Spring.ic" NAME="com.ga.Dao in Fake-Reddit-Spring Coverage Results" MODIFIED="1572116957085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.Dao.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest_createComment_comment_Success.ic" NAME="CommentServiceTest.createComment_comment_Success Coverage Results" MODIFIED="1572118846049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest_createComment_Comment_Success.ic" NAME="CommentServiceTest.createComment_Comment_Success Coverage Results" MODIFIED="1572119306366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest.ic" NAME="CommentServiceTest Coverage Results" MODIFIED="1572119327290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_createPost_success.ic" NAME="PostServiceTest.createPost_success Coverage Results" MODIFIED="1572115753950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1572116540199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_listPosts_Success.ic" NAME="PostServiceTest.listPosts_Success Coverage Results" MODIFIED="1572117493526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest_deleteByCommentId_Comment_Success.ic" NAME="CommentServiceTest.deleteByCommentId_Comment_Success Coverage Results" MODIFIED="1572119107618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$com_ga_controller_in_Fake_Reddit_Spring.ic" NAME="com.ga.controller in Fake-Reddit-Spring Coverage Results" MODIFIED="1572116251270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.controller.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserDaoTest.ic" NAME="UserDaoTest Coverage Results" MODIFIED="1572116647214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.Dao.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_deletePost_Sucess.ic" NAME="PostServiceTest.deletePost_Sucess Coverage Results" MODIFIED="1572115551368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_createPost_success.ic" NAME="PostServiceTest.createPost_success Coverage Results" MODIFIED="1572115753950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserDaoTest_signup_user_success.ic" NAME="UserDaoTest.signup_user_success Coverage Results" MODIFIED="1572116345431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -37,13 +56,7 @@
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserDaoTest_login_user_Success.ic" NAME="UserDaoTest.login_user_Success Coverage Results" MODIFIED="1572116639394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.Dao.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1572116540199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_getCommentsByPostId_Success.ic" NAME="PostServiceTest.getCommentsByPostId_Success Coverage Results" MODIFIED="1572117728285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_listPosts_Success.ic" NAME="PostServiceTest.listPosts_Success Coverage Results" MODIFIED="1572117493526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_upodatePost_success.ic" NAME="PostServiceTest.upodatePost_success Coverage Results" MODIFIED="1572115525333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -55,29 +68,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="130">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/controller/CommentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/CommentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/Dao/UserDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="165">
+              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -111,6 +127,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -118,6 +141,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java" />
       </list>
     </option>
   </component>
@@ -232,7 +256,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572117760262" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572119331111" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -252,7 +276,69 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PostServiceTest.getCommentsByPostId_Success">
+  <component name="RunManager" selected="JUnit.CommentServiceTest">
+    <configuration name="CommentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fake-Reddit-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ga.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ga.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ga.service.CommentServiceTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.createComment_Comment_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fake-Reddit-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ga.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ga.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ga.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="createComment_Comment_Success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.createComment_comment_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fake-Reddit-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ga.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ga.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ga.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="createComment_comment_Success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.deleteByCommentId_Comment_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fake-Reddit-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ga.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ga.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ga.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="deleteByCommentId_Comment_Success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PostServiceTest.getCommentsByPostId_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Fake-Reddit-Spring" />
       <extension name="coverage">
@@ -269,73 +355,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostServiceTest.listPosts_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.service.PostServiceTest" />
-      <option name="METHOD_NAME" value="listPosts_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.Dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.Dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.Dao.UserDaoTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest.login_user_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.Dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.Dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.Dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="login_user_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.ga.Dao in Fake-Reddit-Spring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.Dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.Dao" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommentServiceTest" />
+        <item itemvalue="JUnit.CommentServiceTest.createComment_Comment_Success" />
+        <item itemvalue="JUnit.CommentServiceTest.deleteByCommentId_Comment_Success" />
+        <item itemvalue="JUnit.CommentServiceTest.createComment_comment_Success" />
         <item itemvalue="JUnit.PostServiceTest.getCommentsByPostId_Success" />
-        <item itemvalue="JUnit.PostServiceTest.listPosts_Success" />
-        <item itemvalue="JUnit.com.ga.Dao in Fake-Reddit-Spring" />
-        <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="JUnit.UserDaoTest.login_user_Success" />
       </list>
     </recent_temporary>
   </component>
@@ -349,7 +375,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572114156090</updated>
-      <workItem from="1572114157370" duration="3564000" />
+      <workItem from="1572114157370" duration="5116000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572114617655</created>
@@ -372,31 +398,17 @@
       <option name="project" value="LOCAL" />
       <updated>1572117346222</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test get comments by post id">
+      <created>1572117782785</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572117782785</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDaoTest_login_user_Success - 2019.10.26 at 15h 04m 02s.xml">
-      <configuration name="UserDaoTest.login_user_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest - 2019.10.26 at 15h 04m 10s.xml">
-      <configuration name="UserDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_ga_Dao_in_Fake-Reddit-Spring - 2019.10.26 at 15h 09m 20s.xml">
-      <configuration name="com.ga.Dao in Fake-Reddit-Spring" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PostServiceTest_listPosts_Success - 2019.10.26 at 15h 12m 58s.xml">
-      <configuration name="PostServiceTest.listPosts_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PostServiceTest_listPosts_Success - 2019.10.26 at 15h 13m 08s.xml">
-      <configuration name="PostServiceTest.listPosts_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PostServiceTest_listPosts_Success - 2019.10.26 at 15h 14m 49s.xml">
-      <configuration name="PostServiceTest.listPosts_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PostServiceTest_listPosts_Success - 2019.10.26 at 15h 17m 56s.xml">
-      <configuration name="PostServiceTest.listPosts_Success" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PostServiceTest_listPosts_Success - 2019.10.26 at 15h 18m 16s.xml">
       <configuration name="PostServiceTest.listPosts_Success" configurationId="JUnit" />
     </history-entry>
@@ -406,9 +418,30 @@
     <history-entry file="PostServiceTest_getCommentsByPostId_Success - 2019.10.26 at 15h 22m 10s.xml">
       <configuration name="PostServiceTest.getCommentsByPostId_Success" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommentServiceTest_createComment_comment_Success - 2019.10.26 at 15h 35m 25s.xml">
+      <configuration name="CommentServiceTest.createComment_comment_Success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentServiceTest_createComment_comment_Success - 2019.10.26 at 15h 38m 02s.xml">
+      <configuration name="CommentServiceTest.createComment_comment_Success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentServiceTest_createComment_comment_Success - 2019.10.26 at 15h 38m 45s.xml">
+      <configuration name="CommentServiceTest.createComment_comment_Success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentServiceTest_createComment_comment_Success - 2019.10.26 at 15h 39m 29s.xml">
+      <configuration name="CommentServiceTest.createComment_comment_Success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentServiceTest_createComment_comment_Success - 2019.10.26 at 15h 40m 48s.xml">
+      <configuration name="CommentServiceTest.createComment_comment_Success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentServiceTest_deleteByCommentId_Comment_Success - 2019.10.26 at 15h 45m 09s.xml">
+      <configuration name="CommentServiceTest.deleteByCommentId_Comment_Success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentServiceTest_createComment_Comment_Success - 2019.10.26 at 15h 47m 44s.xml">
+      <configuration name="CommentServiceTest.createComment_Comment_Success" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3564000" />
+    <option name="totallyTimeSpent" value="5116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -456,7 +489,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="testing" />
     <MESSAGE value="test get all post list" />
-    <option name="LAST_COMMIT_MESSAGE" value="test get all post list" />
+    <MESSAGE value="test get comments by post id" />
+    <option name="LAST_COMMIT_MESSAGE" value="test get comments by post id" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/PostDao.java">
@@ -470,13 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/Dao/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -501,10 +528,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/Dao/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="130">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
