@@ -1,5 +1,7 @@
 package com.ga.service;
 
+import com.ga.entity.Comment;
+import com.ga.entity.Post;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -7,11 +9,11 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.any;
-import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.when;
 
@@ -20,6 +22,9 @@ import com.ga.dao.UserDao;
 import com.ga.entity.Response;
 import com.ga.entity.User;
 import com.ga.service.UserServiceImpl;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class UserServiceTest {
@@ -31,6 +36,9 @@ public class UserServiceTest {
 	
 	@Mock
 	private PasswordEncoder bCryptPasswordEncoder;
+
+	@Mock
+	UserService userService1;
 	
 	@InjectMocks
 	private UserServiceImpl userService;
@@ -40,6 +48,12 @@ public class UserServiceTest {
 	
 	@InjectMocks
 	private Response response;
+
+	@InjectMocks
+	private Comment comment;
+
+	@InjectMocks
+	Post post;
 	
 	@Before
 	public void initMocks() {
@@ -53,6 +67,13 @@ public class UserServiceTest {
 		user.setUsername("king");
 		user.setPassword("password");
 		user.setRole("userrole");
+
+		comment.setId(1L);
+		comment.setDescription("description");
+
+		post.setId(1L);
+		post.setTitle("test");
+		post.setDescription("description");
 		
 		response.setToken("2345");
 		response.setUsername(user.getUsername());
@@ -116,6 +137,47 @@ public class UserServiceTest {
 	       Response token = userService.login(user);
 	       assertEquals(token, null);
 	   }
-	
-	
+
+	   @Test
+	public void returnUserName_User_Success(){
+		String username = null;
+
+		when(userService1.returnUsername()).thenReturn(username);
+
+		String expectedUsername = userService.returnUsername();
+
+//		assertNotNull(expectedUsername);
+
+		assertEquals(expectedUsername, username);
+	   }
+
+	   @Test
+	public void getCommentsByUser_User_Success(){
+		   List<Comment> commentList = new ArrayList<>();
+		   commentList.add(comment);
+
+		   when(userDao.getCommentByUser(anyLong())).thenReturn(commentList);
+
+		   List<Comment> expectedList = userService.getCommentsByUser(user.getUserId());
+
+		   assertNotNull(expectedList);
+
+		   assertEquals(expectedList, commentList);
+
+	   }
+
+	@Test
+	public void getPostByUser_User_Success(){
+		List<Post> postList = new ArrayList<>();
+		postList.add(post);
+
+		when(userDao.gePostsByUser(anyLong())).thenReturn(postList);
+
+		List<Post> expectedList = userService.getPostsByUser(user.getUserId());
+
+		assertNotNull(expectedList);
+
+		assertEquals(expectedList, postList);
+
+	}
 }
