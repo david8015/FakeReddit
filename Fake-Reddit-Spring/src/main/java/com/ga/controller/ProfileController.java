@@ -25,6 +25,7 @@ public class ProfileController {
     public Long deletePostById(@PathVariable Long profileId) {
         return profileService.deleteProfileById(profileId);
     }
+
     @PutMapping("/{profileId}")
     public Profile updateProfile(@RequestBody Profile profile, @PathVariable Long profileId) {
         return profileService.updateProfile(profile, profileId);

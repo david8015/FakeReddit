@@ -60,6 +60,7 @@ public class PostControllerTest {
 		comment = new Comment();
 		comments = new ArrayList<Comment>();
 		posts = new ArrayList<Post>();
+
 		comment.setId(1L);
 		comment.setDescription("some comment");
 		comments.add(comment);
@@ -69,7 +70,6 @@ public class PostControllerTest {
 		post.setDescription("some description");
 		post.setComments(comments);
 		post.addComment(comment);
-
 
 		posts.add(post);
 	}
