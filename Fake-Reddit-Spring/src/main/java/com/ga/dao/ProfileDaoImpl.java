@@ -37,9 +37,23 @@ public class ProfileDaoImpl implements ProfileDao {
     }
 
     @Override
-    public Profile getUserProfile(String email) {
-        User user = userDao.getUserByEmail(email);
-        return user.getProfile();
+    public Profile getUserProfile(Long userId) {
+        User user;
+        Profile profile = null;
+        Session session = sessionFactory.getCurrentSession();
+        try{
+            session.beginTransaction();
+
+            user = session.get(User.class, userId);
+
+            profile = user.getProfile();
+
+        }finally {
+            session.close();
+
+
+        return profile;
+        }
     }
 
     @Override

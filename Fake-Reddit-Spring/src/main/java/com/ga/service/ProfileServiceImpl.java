@@ -19,8 +19,8 @@ public class ProfileServiceImpl implements ProfileService{
     }
 
     @Override
-    public Profile getUserProfile(String email) {
-        return profileDao.getUserProfile(email);
+    public Profile getUserProfile(Long userId) {
+        return profileDao.getUserProfile(userId);
     }
 
     @Override

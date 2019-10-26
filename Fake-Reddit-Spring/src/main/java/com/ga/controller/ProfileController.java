@@ -12,12 +12,12 @@ public class ProfileController {
     @Autowired
     ProfileService profileService;
 
-    @GetMapping("/{email}")
-    public Profile getProfile(@RequestParam String email) {
-        return profileService.getUserProfile(email);
+    @GetMapping("/user/{userId}")
+    public Profile getProfile(@PathVariable Long userId) {
+        return profileService.getUserProfile(userId);
     }
 
-    @PostMapping("/{email}")
+    @PostMapping("/user/{email}")
     public Profile createUserProfile(@PathVariable String email, @RequestBody Profile profile) {
         return profileService.createUserProfile(email, profile);
     }
