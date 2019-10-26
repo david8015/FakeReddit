@@ -13,7 +13,7 @@ public class ProfileController {
     ProfileService profileService;
 
     @GetMapping("/{email}")
-    public Profile getProfile(@PathVariable String email) {
+    public Profile getProfile(@RequestParam String email) {
         return profileService.getUserProfile(email);
     }
 

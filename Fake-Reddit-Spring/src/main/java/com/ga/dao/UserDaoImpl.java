@@ -81,7 +81,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<Comment> getCommentByUser(String email) {
+	public List<Comment> getCommentByUser(Long userId ) {
 		List<Comment> commentList = null;
 		User user2;
 
@@ -89,8 +89,7 @@ public class UserDaoImpl implements UserDao {
 
 		try{
 			session.beginTransaction();
-			user2 = (User)session.createQuery("FROM User u WHERE u.email = '" +
-					email + "'").getSingleResult();
+			user2 = session.get(User.class, userId);
 			commentList = user2.getComments();
 			Hibernate.initialize(commentList);
 
@@ -103,16 +102,15 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<Post> gePostsByUser(User user) {
+	public List<Post> gePostsByUser(Long userId) {
 		List<Post> postList= null;
-		User user2 = null;
+		User user2;
 
 		Session session = sessionFactory.getCurrentSession();
 
 		try{
 			session.beginTransaction();
-			user2 = (User)session.createQuery("FROM User u WHERE u.email = '" +
-					user.getEmail() + "'").getSingleResult();
+			user2 = user2 = session.get(User.class, userId);
 			postList = user2.getPosts();
 			Hibernate.initialize(postList);
 

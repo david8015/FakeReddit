@@ -91,13 +91,13 @@ public class UserServiceImpl implements UserService {
      }
 
     @Override
-    public List<Comment> getCommentsByUser(String email) {
-        return userDao.getCommentByUser(email);
+    public List<Comment> getCommentsByUser(Long userId ) {
+        return userDao.getCommentByUser(userId);
     }
 
     @Override
-    public List<Post> getPostsByUser(User user) {
-        return userDao.gePostsByUser(user);
+    public List<Post> getPostsByUser(Long userId) {
+        return userDao.gePostsByUser(userId);
     }
 
 }

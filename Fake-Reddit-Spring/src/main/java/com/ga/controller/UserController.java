@@ -31,11 +31,11 @@ public class UserController {
 		return userService.login(user);
 	}
 
-	@GetMapping("/comments/{email}")
-	public List<Comment> getCommentByUser(@PathVariable String email){
-		return userService.getCommentsByUser(email);
+	@GetMapping("/comments/{userId}")
+	public List<Comment> getCommentByUser(@PathVariable Long userId ){
+		return userService.getCommentsByUser(userId);
 	}
 
-	@GetMapping("/posts")
-	public List<Post> getPostsByUser(@RequestBody User user){return userService.getPostsByUser(user);}
+	@GetMapping("/posts{userId}")
+	public List<Post> getPostsByUser(@PathVariable Long userId ){return userService.getPostsByUser(userId);}
 }

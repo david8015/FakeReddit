@@ -31,7 +31,9 @@ import com.ga.entity.Comment;
 import com.ga.entity.Post;
 import com.ga.entity.User;
 import com.ga.service.PostService;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@EnableWebMvc
 @RunWith(MockitoJUnitRunner.class)
 public class ProfileControllerTest {
 
@@ -66,34 +68,37 @@ public class ProfileControllerTest {
         //profile.setAdditionalEmail("test additional email");
 
         user.setProfile(profile);
-    }
-//    @Test
-//    public void getProfileByEmail_Profile_Success() throws Exception {
-//
-//        RequestBuilder requestBuilder = MockMvcRequestBuilders
-//                .get("/profile/test@email.com");
-//        ObjectMapper mapper = new ObjectMapper();
-//        String profileByUsername = mapper.writeValueAsString(profile);
-//        when(profileService.getUserProfile(anyString())).thenReturn(profile);
-//        mockMvc.perform(requestBuilder)
-//                .andExpect(status().isOk())
-//                .andExpect(content().string(profileByUsername));
-//    }
+        System.out.println(user.getProfile());
 
-//    @Test
-//    public void createProfileByEmail_Profile_Success() throws Exception {
-//        RequestBuilder requestBuilder = MockMvcRequestBuilders
-//                .post("/profile/test@email.com")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(createProfileInJson(profile.getMobile(), profile.getAddress()));
-//        when(profileService.createUserProfile(anyString(), any())).thenReturn(profile);
-//        ObjectMapper mapper = new ObjectMapper();
-//        String profile2 = mapper.writeValueAsString(profile);
-//
-//        mockMvc.perform(requestBuilder)
-//                .andExpect(status().isOk())
-//                .andExpect(content().string(profile2));
-//      }
+    }
+    @Test
+    public void getProfileByEmail_Profile_Success() throws Exception {
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/profile/test@email.com");
+        ObjectMapper mapper = new ObjectMapper();
+        String profileByUsername = mapper.writeValueAsString(profile);
+        when(profileService.getUserProfile(anyString())).thenReturn(profile);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().string(profileByUsername));
+    }
+
+    @Test
+    public void createProfileByEmail_Profile_Success() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/profile/test@email.com")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(createProfileInJson(profile.getMobile(), profile.getAddress()));
+        when(profileService.createUserProfile(anyString(), any())).thenReturn(profile);
+        ObjectMapper mapper = new ObjectMapper();
+        String profile2 = mapper.writeValueAsString(profile);
+
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().string(profile2));
+
+    }
 
     @Test
     public void updatePost_Post_Success() throws Exception{
@@ -106,6 +111,7 @@ public class ProfileControllerTest {
         when(profileService.updateProfile(any(), anyLong())).thenReturn(profile);
         ObjectMapper mapper = new ObjectMapper();
         String profile2 = mapper.writeValueAsString(profile);
+        System.out.println(profile2);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().string(profile2));
