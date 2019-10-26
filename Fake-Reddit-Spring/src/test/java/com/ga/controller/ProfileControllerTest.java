@@ -68,17 +68,17 @@ public class ProfileControllerTest {
         //profile.setAdditionalEmail("test additional email");
 
         user.setProfile(profile);
-        System.out.println(user.getProfile());
+        
 
     }
     @Test
-    public void getProfileByEmail_Profile_Success() throws Exception {
+    public void getProfileByUserId_Profile_Success() throws Exception {
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/profile/test@email.com");
+                .get("/profile/user/1");
         ObjectMapper mapper = new ObjectMapper();
         String profileByUsername = mapper.writeValueAsString(profile);
-        when(profileService.getUserProfile(anyString())).thenReturn(profile);
+        when(profileService.getUserProfile(anyLong())).thenReturn(profile);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().string(profileByUsername));
