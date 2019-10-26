@@ -68,35 +68,24 @@ public class PostServiceTest {
 	public void deletePost_Sucess() {
 		Long postId = post.getId();
 
-		System.out.println(postId);
-
-//		Long expectedPostId = 1L;
-
 		when(postDao.DeletePostByPostId(anyLong())).thenReturn(postId);
 		Long expectedPostId = postService.DeletePostById(postId);
-
-		System.out.println(expectedPostId.getClass().getSimpleName());
-
-		System.out.println(postId.getClass().getSimpleName());
 		
-		
-//		assertNotNull(expectedPostId);
+		assertNotNull(expectedPostId);
 		assertEquals(postId, expectedPostId);
 
 	}
 
 	@Test
 	public void upodatePost_success() {
-		Post expectedPost = new Post();
-		expectedPost.setId(1L);
-		expectedPost.setTitle("test");
-		expectedPost.setDescription("description");
 
-		when(postDao.updatePost(any(), anyLong())).thenReturn(expectedPost);
+		when(postDao.updatePost(any(), anyLong())).thenReturn(post);
+
+		Post expectedPost = postService.updatePost(post, post.getId());
 
 		assertNotNull("expected not null", expectedPost);
 
-		assertEquals(post.getId(), expectedPost.getId());
+		assertEquals(post.getTitle(), expectedPost.getTitle());
 	}
 
 	@Test
