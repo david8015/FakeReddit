@@ -12,14 +12,14 @@ public class ProfileController {
     @Autowired
     ProfileService profileService;
 
-    @GetMapping("/{username}")
+    @GetMapping("/{email}")
     public Profile getProfile(@PathVariable String email) {
         return profileService.getUserProfile(email);
     }
 
-    @PostMapping("/{username}")
-    public Profile createUserProfile(@PathVariable String username, @RequestBody Profile profile) {
-        return profileService.createUserProfile(username, profile);
+    @PostMapping("/{email}")
+    public Profile createUserProfile(@PathVariable String email, @RequestBody Profile profile) {
+        return profileService.createUserProfile(email, profile);
     }
     @DeleteMapping("/{profileId}")
     public Long deletePostById(@PathVariable Long profileId) {
