@@ -81,6 +81,32 @@ public class CommentControllerTest {
                 .andExpect(content().string(commentMapper));
 
     }
+
+    @Test
+    public void updatePost_Post_Success() throws Exception{
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .put("/comment/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(createCommentInJson(comment.getDescription()));
+
+        when(commentService.updateComment(any(), anyLong())).thenReturn(comment);
+        ObjectMapper mapper = new ObjectMapper();
+        String commentMapper = mapper.writeValueAsString(comment);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().string(commentMapper));
+    }
+
+    @Test
+    public void deletePost_Post_Success() throws Exception{
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .delete("/comment/1");
+        when(commentService.deleteCommentById(anyLong())).thenReturn(1L);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json("1"));
+    }
+
     public static String createCommentInJson( String description){
         return "{\"description\":\"" + description + "\"}";
 
