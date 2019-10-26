@@ -10,6 +10,7 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ga.entity.Comment;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -33,6 +34,9 @@ public class PostServiceTest {
 	@InjectMocks
 	private Post post;
 
+	@InjectMocks
+	Comment comment;
+
 	@Before
 	public void initMocks() {
 		MockitoAnnotations.initMocks(this);
@@ -43,6 +47,9 @@ public class PostServiceTest {
 		post.setId(1L);
 		post.setTitle("test");
 		post.setDescription("description");
+
+		comment.setId(2L);
+		comment.setDescription("description2");
 	}
 
 	@Test
@@ -93,11 +100,21 @@ public class PostServiceTest {
 
 		List<Post> expectedList = postService.listPosts();
 
-		assertNotNull("expected not null", listPosts);
+		assertNotNull("expected not null", expectedList);
 		assertEquals(expectedList, listPosts);
 	}
 
+	@Test
+	public void getCommentsByPostId_Success(){
+		List<Comment> commentList = new ArrayList<>();
+		commentList.add(comment);
 
+		when(postDao.getCommentsByPostId(anyLong())).thenReturn(commentList);
 
-//	public List<Comment> getCommentsByPostId(Long postId);
+		List<Comment> expectedList = postService.getCommentsByPostId(anyLong());
+
+		assertNotNull(expectedList);
+		assertEquals(commentList, expectedList);
+
+	}
 }
