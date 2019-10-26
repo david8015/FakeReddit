@@ -23,8 +23,8 @@ public class PostServiceTest {
 	@Mock
 	PostDao postDao;
 
-	@InjectMocks
-	private UserServiceImpl userService;
+	@Mock
+	private UserService userService;
 
 	@InjectMocks
 	private PostServiceImpl postService;
@@ -42,22 +42,17 @@ public class PostServiceTest {
 		post.setId(1L);
 		post.setTitle("test");
 		post.setDescription("description");
-
-//		response.setToken("2345");
-//		response.setUsername(user.getUsername());
 	}
 
 	@Test
 	public void createPost_success() {
-		Post expectedPost = new Post();
-//		expectedPost.setId(1L);
-//		expectedPost.setTitle("test");
-//		expectedPost.setDescription("description");
-
 		String username = "username";
+		Post expectedPost = null;
 
 		when(userService.returnUsername()).thenReturn(username);
-		when(postDao.createPost(any(), anyString())).thenReturn(expectedPost);
+		when(postDao.createPost(any(), anyString())).thenReturn(post);
+
+		expectedPost = postService.createPost(post);
 
 		assertNotNull("expected not null", expectedPost);
 		assertEquals(post.getId(), expectedPost.getId());

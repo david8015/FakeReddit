@@ -13,20 +13,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest.ic" NAME="PostServiceTest Coverage Results" MODIFIED="1572114549756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest.ic" NAME="PostServiceTest Coverage Results" MODIFIED="1572115372373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_deletePost_Sucess.ic" NAME="PostServiceTest.deletePost_Sucess Coverage Results" MODIFIED="1572115551368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_createPost_success.ic" NAME="PostServiceTest.createPost_success Coverage Results" MODIFIED="1572115564043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ga.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_upodatePost_success.ic" NAME="PostServiceTest.upodatePost_success Coverage Results" MODIFIED="1572115525333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ga.service.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="201" />
+    <option name="myElementSize" value="203" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="534">
+              <caret line="69" column="45" lean-forward="true" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/PostDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -75,6 +102,21 @@
               <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -91,15 +133,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ga" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -112,7 +145,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572114606032" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572115588159" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -132,7 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PostServiceTest">
+  <component name="RunManager" selected="JUnit.PostServiceTest.createPost_success">
     <configuration name="PostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Fake-Reddit-Spring" />
       <extension name="coverage">
@@ -143,6 +176,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ga.service" />
       <option name="MAIN_CLASS_NAME" value="com.ga.service.PostServiceTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest.createPost_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fake-Reddit-Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ga.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ga.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ga.service.PostServiceTest" />
+      <option name="METHOD_NAME" value="createPost_success" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,9 +230,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PostServiceTest" />
-        <item itemvalue="JUnit.PostServiceTest.upodatePost_success" />
+        <item itemvalue="JUnit.PostServiceTest.createPost_success" />
         <item itemvalue="JUnit.PostServiceTest.deletePost_Sucess" />
+        <item itemvalue="JUnit.PostServiceTest.upodatePost_success" />
+        <item itemvalue="JUnit.PostServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -197,30 +247,55 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572114156090</updated>
-      <workItem from="1572114157370" duration="448000" />
+      <workItem from="1572114157370" duration="1427000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1572114617655</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572114617655</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PostServiceTest_deletePost_Sucess - 2019.10.26 at 14h 23m 17s.xml">
+    <history-entry file="PostServiceTest_createPost_success - 2019.10.26 at 14h 41m 18s.xml">
+      <configuration name="PostServiceTest.createPost_success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest - 2019.10.26 at 14h 42m 21s.xml">
+      <configuration name="PostServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest_createPost_success - 2019.10.26 at 14h 42m 29s.xml">
+      <configuration name="PostServiceTest.createPost_success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest - 2019.10.26 at 14h 42m 54s.xml">
+      <configuration name="PostServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest_deletePost_Sucess - 2019.10.26 at 14h 45m 10s.xml">
       <configuration name="PostServiceTest.deletePost_Sucess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PostServiceTest - 2019.10.26 at 14h 24m 06s.xml">
-      <configuration name="PostServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PostServiceTest_upodatePost_success - 2019.10.26 at 14h 28m 53s.xml">
+    <history-entry file="PostServiceTest_upodatePost_success - 2019.10.26 at 14h 45m 18s.xml">
       <configuration name="PostServiceTest.upodatePost_success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PostServiceTest - 2019.10.26 at 14h 29m 12s.xml">
-      <configuration name="PostServiceTest" configurationId="JUnit" />
+    <history-entry file="PostServiceTest_upodatePost_success - 2019.10.26 at 14h 45m 27s.xml">
+      <configuration name="PostServiceTest.upodatePost_success" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest_deletePost_Sucess - 2019.10.26 at 14h 45m 40s.xml">
+      <configuration name="PostServiceTest.deletePost_Sucess" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest_deletePost_Sucess - 2019.10.26 at 14h 45m 53s.xml">
+      <configuration name="PostServiceTest.deletePost_Sucess" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PostServiceTest_createPost_success - 2019.10.26 at 14h 46m 06s.xml">
+      <configuration name="PostServiceTest.createPost_success" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="448000" />
+    <option name="totallyTimeSpent" value="1427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -260,11 +335,36 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/PostDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="534">
+          <caret line="69" column="45" lean-forward="true" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
         </state>
       </provider>
     </entry>
