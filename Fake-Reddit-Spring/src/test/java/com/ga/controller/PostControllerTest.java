@@ -1,5 +1,6 @@
 package com.ga.controller;
 
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -100,32 +101,25 @@ public class PostControllerTest {
 				.content(createPostInJSon(post.getTitle(),post.getDescription()));
 		ObjectMapper mapper = new ObjectMapper();
 		String postMapper = mapper.writeValueAsString(post);
-		//System.out.println(postMapper);
 		when(postService.createPost(any())).thenReturn(post);
 		mockMvc.perform(requestBuilder)
 				.andExpect(status().isOk())
 				.andExpect(content().string(postMapper));
 	}
+	@Test
+	public void updatePost_Post_Success() throws Exception{
+		RequestBuilder requestBuilder = MockMvcRequestBuilders
+				.put("/post/1")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(createPostInJSon(post.getTitle(), post.getDescription()));
 
-//
-//	@Test
-//	public void login_User_Success() throws Exception{
-//		response.setToken("king");
-//		response.setUsername("test");
-//
-//		RequestBuilder requestBuilder = MockMvcRequestBuilders
-//				.post("/user/login")
-//				.contentType(MediaType.APPLICATION_JSON)
-//				.content(createUserInJson("king", "test2434", "king@test.com"));
-//
-//		when(userService.login(any())).thenReturn(response);
-//
-//		mockMvc.perform(requestBuilder)
-//				.andExpect(status().isOk())
-//				.andExpect(content().json("{\"token\":\"king\",\"username\":\"test\"}"));
-//
-//	}
-
+		when(postService.updatePost(any(), anyLong())).thenReturn(post);
+		ObjectMapper mapper = new ObjectMapper();
+		String postMapper = mapper.writeValueAsString(post);
+		mockMvc.perform((requestBuilder))
+				.andExpect(status().isOk())
+				.andExpect(content().string(postMapper));
+	}
 
 	public static String createPostInJSon(String title, String description){
 		return "{ \"title\": \"" + title + "\", " +

@@ -88,6 +88,7 @@ public class PostDaoImpl implements PostDao{
 		try {
 			session.beginTransaction();
 			postToUpdate = session.get(Post.class, postId);
+			postToUpdate.setTitle(post.getTitle());
 			postToUpdate.setDescription(post.getDescription());
 			
 			session.update(postToUpdate);
