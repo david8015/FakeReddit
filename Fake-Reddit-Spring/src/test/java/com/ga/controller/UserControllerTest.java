@@ -36,6 +36,9 @@ public class UserControllerTest {
     @InjectMocks
     Response response;
 
+    @InjectMocks
+    Comment comment;
+
     @Before
     public void init(){
         mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
@@ -53,10 +56,8 @@ public class UserControllerTest {
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"token\":\"2468\"}"));
-           
 
     }
-    
 
     @Test
     public void login_User_Success() throws Exception{
@@ -75,7 +76,6 @@ public class UserControllerTest {
                 .andExpect(content().json("{\"token\":\"king\",\"username\":\"test\"}"));
 
 
-
     }
     
     private static String createUserInJson(String username, String password, String email){
@@ -90,8 +90,7 @@ public class UserControllerTest {
                     "\"username\":\"" + username + "\"}";
     }
     
-    @InjectMocks
-     Comment comment;
+
     
     
 //    @Test
@@ -100,18 +99,18 @@ public class UserControllerTest {
 //    	comment.setId(1L);
 //    	comment.setDescription("test comment1");
 //    	commentList.add(comment);
-//    
+//
 //    	RequestBuilder requestBuilder = MockMvcRequestBuilders
 //                .get("/user/comments/test@comment.com")
 //                .accept(MediaType.APPLICATION_JSON);
-//    	
+//
 //    	when(userService.getCommentsByUser(any())).thenReturn(commentList);
-//    	
+//
 //    	MvcResult result = mockMvc.perform(requestBuilder)
 //					    	.andExpect(status().isOk())
 //					    	.andReturn();
-//    	
+//
 //    	System.out.println(result.getResponse().getContentAsString());
-//    	
+//
 //    }
 }

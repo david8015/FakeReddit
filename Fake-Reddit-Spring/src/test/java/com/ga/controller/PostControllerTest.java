@@ -1,6 +1,7 @@
 package com.ga.controller;
 
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.mock;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -116,9 +117,19 @@ public class PostControllerTest {
 		when(postService.updatePost(any(), anyLong())).thenReturn(post);
 		ObjectMapper mapper = new ObjectMapper();
 		String postMapper = mapper.writeValueAsString(post);
-		mockMvc.perform((requestBuilder))
+		mockMvc.perform(requestBuilder)
 				.andExpect(status().isOk())
 				.andExpect(content().string(postMapper));
+	}
+
+	@Test
+	public void deletePost_Post_Success() throws Exception{
+		RequestBuilder requestBuilder = MockMvcRequestBuilders
+				.delete("/post/1");
+		when(postService.DeletePostById(anyLong())).thenReturn(1L);
+		mockMvc.perform(requestBuilder)
+				.andExpect(status().isOk())
+				.andExpect(content().json("1"));
 	}
 
 	public static String createPostInJSon(String title, String description){
