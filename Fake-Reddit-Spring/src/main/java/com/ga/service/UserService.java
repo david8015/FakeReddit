@@ -21,5 +21,5 @@ public interface UserService extends UserDetailsService{
 
 	public List<Comment> getCommentsByUser(Long userId );
 
-	List<Post> getPostsByUser(Long userId );
+	public List<Post> getPostsByUser(Long userId );
 }

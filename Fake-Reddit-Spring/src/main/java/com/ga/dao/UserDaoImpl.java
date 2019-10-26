@@ -110,7 +110,7 @@ public class UserDaoImpl implements UserDao {
 
 		try{
 			session.beginTransaction();
-			user2 = user2 = session.get(User.class, userId);
+			user2 = session.get(User.class, userId);
 			postList = user2.getPosts();
 			Hibernate.initialize(postList);
 

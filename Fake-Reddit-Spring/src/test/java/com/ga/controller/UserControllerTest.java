@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.ga.entity.Post;
+import com.ga.entity.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,29 +49,60 @@ public class UserControllerTest {
     @InjectMocks
     Post post;
 
+    @InjectMocks
+    User user;
+
     @Mock
     List<Comment> commentList;
+
+    @Mock
+    List<Post> postList;
 
     @Before
     public void init(){
         mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
 
         post = new Post();
+        user = new User();
         commentList = new ArrayList<Comment>();
+        postList = new ArrayList<Post>();
         comment.setId(1L);
         comment.setDescription("test comment1");
+        commentList.add(comment);
+        post.setId(1L);
+        post.setTitle("test title1");
+        post.setDescription("test desc1");
         post.addComment(comment);
-        post.getComments();
+        user.setComments(commentList);
+        postList.add(post);
+        user.setPosts(postList);
     }
 
     @Test
-    public void getCommentByUserId_Success() throws Exception {
+    public void getCommentByUserId_User_Success() throws Exception {
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/user/comments/1")
                 .accept(MediaType.APPLICATION_JSON);
 
-        when(userService.getCommentsByUser(anyLong())).thenReturn(post.getComments());
+        when(userService.getCommentsByUser(anyLong())).thenReturn(user.getComments());
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andReturn();
+
+        System.out.println(result.getResponse().getContentAsString());
+
+    }
+
+    @Test
+    public void getPostsUserId_User_Success() throws Exception {
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/user/posts/1")
+                .accept(MediaType.APPLICATION_JSON);
+
+        when(userService.getPostsByUser(anyLong())).thenReturn(user.getPosts());
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())

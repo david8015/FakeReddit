@@ -36,6 +36,6 @@ public class UserController {
 		return userService.getCommentsByUser(userId);
 	}
 
-	@GetMapping("/posts{userId}")
+	@GetMapping("/posts/{userId}")
 	public List<Post> getPostsByUser(@PathVariable Long userId ){return userService.getPostsByUser(userId);}
 }
