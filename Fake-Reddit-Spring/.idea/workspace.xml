@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2d2ad8ac-0461-4dac-abda-7d9d0708c09f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ga/Dao/CommentDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ga/Dao/CommentDaoTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -246,7 +245,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572123535943" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572123584446" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -365,7 +364,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572114156090</updated>
-      <workItem from="1572114157370" duration="9258000" />
+      <workItem from="1572114157370" duration="9364000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572114617655</created>
@@ -416,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572122725265</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="user dao test">
+      <created>1572123565220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572123565220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -452,11 +458,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9258000" />
+    <option name="totallyTimeSpent" value="9364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -504,7 +509,8 @@
     <MESSAGE value="test comment service layer" />
     <MESSAGE value="passing all profile service methods tests" />
     <MESSAGE value="user service test" />
-    <option name="LAST_COMMIT_MESSAGE" value="user service test" />
+    <MESSAGE value="user dao test" />
+    <option name="LAST_COMMIT_MESSAGE" value="user dao test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostService.java">
