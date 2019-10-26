@@ -74,6 +74,8 @@ public class UserControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"token\":\"king\",\"username\":\"test\"}"));
 
+
+
     }
     
     private static String createUserInJson(String username, String password, String email){

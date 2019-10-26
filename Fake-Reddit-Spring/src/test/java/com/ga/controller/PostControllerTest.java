@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
+
+import com.fasterxml.jackson.databind.util.ObjectBuffer;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -73,6 +75,7 @@ public class PostControllerTest {
 		post.setTitle("some title");
 		post.setDescription("some description");
 		post.setComments(comments);
+		//post.setUser(user);
 		posts.add(post);
 	}
 	@Test
@@ -82,24 +85,55 @@ public class PostControllerTest {
 				.accept(MediaType.APPLICATION_JSON);
 		ObjectMapper mapper = new ObjectMapper();
 		String listOfPostsMapper = mapper.writeValueAsString(posts);
+		System.out.println(listOfPostsMapper);
 		when(postService.listPosts()).thenReturn(posts);
 		mockMvc.perform(requestBuilder)
 			.andExpect(status().isOk())
 			.andExpect(content().string(listOfPostsMapper));
 	}
+
+	@Test
+	public void createPost_Post_Success() throws Exception{
+		RequestBuilder requestBuilder = MockMvcRequestBuilders
+				.post("/post")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(createPostInJSon(post.getTitle(),post.getDescription()));
+		ObjectMapper mapper = new ObjectMapper();
+		String postMapper = mapper.writeValueAsString(post);
+		//System.out.println(postMapper);
+		when(postService.createPost(any())).thenReturn(post);
+		mockMvc.perform(requestBuilder)
+				.andExpect(status().isOk())
+				.andExpect(content().string(postMapper));
+	}
+
+//
+//	@Test
+//	public void login_User_Success() throws Exception{
+//		response.setToken("king");
+//		response.setUsername("test");
+//
+//		RequestBuilder requestBuilder = MockMvcRequestBuilders
+//				.post("/user/login")
+//				.contentType(MediaType.APPLICATION_JSON)
+//				.content(createUserInJson("king", "test2434", "king@test.com"));
+//
+//		when(userService.login(any())).thenReturn(response);
+//
+//		mockMvc.perform(requestBuilder)
+//				.andExpect(status().isOk())
+//				.andExpect(content().json("{\"token\":\"king\",\"username\":\"test\"}"));
+//
+//	}
+
+
+	public static String createPostInJSon(String title, String description){
+		return "{ \"title\": \"" + title + "\", " +
+				"\"description\":\"" + description + "\"}";
+
+	}
 	
 	     
 
-//	@Test
-//	public void getAllPosts_Posts_SUCCESS() throws Exception {
-//		RequestBuilder requestBuilder = MockMvcRequestBuilders
-//				.get("/post/list")
-//				.accept(MediaType.APPLICATION_JSON);
-//
-//		when(postService.listPosts()).thenReturn(posts);
-//
-//		mockMvc.perform(requestBuilder).andExpect(status().isOk());
-////	            .andReturn();
-//	}
 
 }
