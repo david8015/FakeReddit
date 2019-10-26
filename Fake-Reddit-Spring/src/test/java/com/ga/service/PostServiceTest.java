@@ -18,6 +18,7 @@ import org.mockito.MockitoAnnotations;
 
 import com.ga.dao.PostDao;
 import com.ga.entity.Post;
+import sun.jvm.hotspot.debugger.linux.x86.LinuxX86CFrame;
 
 public class PostServiceTest {
 	@Mock
@@ -88,12 +89,15 @@ public class PostServiceTest {
 		List<Post> listPosts = new ArrayList<Post>();
 		listPosts.add(post);
 
-		List<Post> expectedList = new ArrayList<Post>();
-		expectedList.add(post);
+		when(postDao.listPosts()).thenReturn(listPosts);
 
-		when(postDao.listPosts()).thenReturn(expectedList);
+		List<Post> expectedList = postService.listPosts();
 
-		assertNotNull("expected not null", expectedList);
-//		assertEquals();
+		assertNotNull("expected not null", listPosts);
+		assertEquals(expectedList, listPosts);
 	}
+
+
+
+//	public List<Comment> getCommentsByPostId(Long postId);
 }
