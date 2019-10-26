@@ -48,5 +48,4 @@ public class PostController {
 		return postService.getCommentsByPostId(postId);
 	}
 
-
 }

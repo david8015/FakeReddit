@@ -1,5 +1,6 @@
 package com.ga.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -32,12 +33,6 @@ public class Post {
 	
 	public Post() {
 	}
-//
-//	public Post(Long postId, String title, String description) {
-//		this.postId = postId;
-//		this.title = title;
-//		this.description = description;
-//	}
 
 	public Long getId() {
 		return postId;
@@ -86,9 +81,16 @@ public class Post {
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
-	
-	
-	
-	
+
+
+
+	public List<Comment> addComment(Comment comment) {
+		if(comments == null)
+			comments = new ArrayList<>();
+
+		 comments.add( comment);
+
+		return comments;
+	}
 	
 }

@@ -52,34 +52,40 @@ public class PostControllerTest {
 
 	@Mock
 	PostService postService;
-	
-	
 
 	@Before
 	public void init() {
 		mockMvc = MockMvcBuilders.standaloneSetup(postController).build();
-		String username;
-
-		user = new User();
-		username = "someUser";
 		post = new Post();
-		posts = new ArrayList<Post>();
 		comment = new Comment();
 		comments = new ArrayList<Comment>();
+		posts = new ArrayList<Post>();
 		comment.setId(1L);
-		comment.setDescription("some post");
+		comment.setDescription("some comment");
 		comments.add(comment);
 
-		user.setUserId(1L);
-		user.setUsername("testuser");
-		user.setPassword("testpass");
 		post.setId(1L);
 		post.setTitle("some title");
 		post.setDescription("some description");
 		post.setComments(comments);
-		//post.setUser(user);
+		post.addComment(comment);
+
+
 		posts.add(post);
 	}
+
+	@Test
+	public void getCommentsByPostId_Post_Success() throws Exception{
+		RequestBuilder requestBuilder = MockMvcRequestBuilders
+				.get("/post/1/comment");
+		ObjectMapper mapper = new ObjectMapper();
+		String listOfCommentsByPostId = mapper.writeValueAsString(comments);
+		when(postService.getCommentsByPostId(anyLong())).thenReturn(comments);
+		mockMvc.perform(requestBuilder)
+				.andExpect(status().isOk())
+				.andExpect(content().string(listOfCommentsByPostId));
+	}
+
 	@Test
 	public void getAllPosts_Posts_Success() throws Exception{
 		RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -132,13 +138,11 @@ public class PostControllerTest {
 				.andExpect(content().json("1"));
 	}
 
+
 	public static String createPostInJSon(String title, String description){
 		return "{ \"title\": \"" + title + "\", " +
 				"\"description\":\"" + description + "\"}";
 
 	}
-	
-	     
-
 
 }
