@@ -38,9 +38,6 @@ public class CommentDaoTest {
     @InjectMocks
     private Comment comment;
 
-    @Mock
-    User user;
-
     @InjectMocks
     private CommentDaoImpl commentDao;
 
@@ -49,9 +46,6 @@ public class CommentDaoTest {
 
     @Mock
     Query<User> query;
-
-    @Mock
-    Query<Comment> commentQuery;
 
     @Before
     public void init() {
@@ -82,6 +76,23 @@ public class CommentDaoTest {
 
         assertNotNull("Test returned null object, expected non-null", commentTest);
         assertEquals(commentTest, comment);
+
+        }
+    @Test
+    public void updateComment_Comment_Success(){
+
+        when(session.get(Comment.class, 1L)).thenReturn(comment);
+        Comment commentTest = commentDao.updateComment(comment, 1l);
+        assertNotNull("Test returned null object, expected non-null", commentTest);
+        assertEquals(commentTest, comment);
+
+        }
+    @Test
+    public void deleteComment_Comment_Success(){
+        when(session.get(Comment.class, 1L)).thenReturn(comment);
+        Long commentTestId = commentDao.deleteCommentById(1L);
+            assertNotNull("Test returned null object, expected non-null", commentTestId);
+            assertEquals(commentTestId, comment.getId());
 
         }
 
