@@ -17,9 +17,9 @@ public class ProfileController {
         return profileService.getUserProfile(userId);
     }
 
-    @PostMapping("/user/{email}")
-    public Profile createUserProfile(@PathVariable String email, @RequestBody Profile profile) {
-        return profileService.createUserProfile(email, profile);
+    @PostMapping("/user/{username}")
+    public Profile createUserProfile(@PathVariable String username, @RequestBody Profile profile) {
+        return profileService.createUserProfile(username, profile);
     }
     @DeleteMapping("/{profileId}")
     public Long deletePostById(@PathVariable Long profileId) {

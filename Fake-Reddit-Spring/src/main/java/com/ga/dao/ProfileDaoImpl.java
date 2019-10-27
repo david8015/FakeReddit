@@ -16,15 +16,17 @@ public class ProfileDaoImpl implements ProfileDao {
     private SessionFactory sessionFactory;
 
     @Override
-    public Profile createUserProfile(String email, Profile profile) {
+    public Profile createUserProfile(String username, Profile profile) {
 
-        User user = userDao.getUserByEmail(email);
+        User user;
 
         Session session = sessionFactory.getCurrentSession();
 
         try {
             session.beginTransaction();
 
+            user = (User) session.createQuery("FROM User u where u.username = '" +
+                    username + "'").uniqueResult();
             session.save(profile);
             user.setProfile(profile);
             session.update(user);

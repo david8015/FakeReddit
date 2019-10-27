@@ -14,8 +14,8 @@ public class ProfileServiceImpl implements ProfileService{
     ProfileDao profileDao;
 
     @Override
-    public Profile createUserProfile(String email, Profile newProfile) {
-        return profileDao.createUserProfile(email, newProfile);
+    public Profile createUserProfile(String username, Profile newProfile) {
+        return profileDao.createUserProfile(username, newProfile);
     }
 
     @Override

@@ -61,7 +61,7 @@ public class ProfileDaoTest {
     }
     @Test
     public void createUser_Profile_Success(){
-
+        when(session.createQuery(anyString())).thenReturn(query);
         Profile testProfile = profileDao.createUserProfile("email", profile);
         assertEquals(profile, testProfile);
 

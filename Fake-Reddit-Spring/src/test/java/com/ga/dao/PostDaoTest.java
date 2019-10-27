@@ -84,7 +84,6 @@ public class PostDaoTest {
     public void createPost_Post_success(){
         when(session.createQuery(anyString())).thenReturn(query);
         Post postTest = postDao.createPost(post, user.getUsername());
-
         assertNotNull("Test returned null object, expected non-null", postTest);
         assertEquals(postTest, post);
 
