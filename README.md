@@ -26,16 +26,16 @@ With those deliverables in mind we went to Pivotal Tracker and developed epics a
 
                          Challenges / areas of opportunity 
 
-1. connecting to frontend application
-2. Using Mockito to test each layer
-3. 
+12. connecting to frontend application
+13. Using Mockito to test each layer
+14. 
 
 
                      
                                 Successes / What went well 
 
-1. open and honest communication
-2. pair programing
-3. we balanced each other (strengths / weeknesses)
-4. over 70% test coverage on entire application (including config package)
+15. open and honest communication
+16. pair programing
+17. we balanced each other (strengths / weeknesses)
+18. over 70% test coverage on entire application (including config package)
 
