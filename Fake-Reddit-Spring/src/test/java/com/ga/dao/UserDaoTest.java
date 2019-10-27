@@ -1,4 +1,4 @@
-package com.ga.Dao;
+package com.ga.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -19,8 +19,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import com.ga.dao.UserDao;
-import com.ga.dao.UserDaoImpl;
 import com.ga.entity.User;
 
 public class UserDaoTest {

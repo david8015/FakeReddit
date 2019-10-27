@@ -32,7 +32,7 @@ public class PostDaoImpl implements PostDao{
 		} finally {
 			session.close();
 		}
-		// TODO Auto-generated method stub
+
 		return allPosts;
 	}
 
@@ -61,7 +61,8 @@ public class PostDaoImpl implements PostDao{
 	}
 
 	@Override
-	public Long DeletePostByPostId(Long postId) {
+	public Long deletePostByPostId(Long postId) {
+
 		Session session = sessionFactory.getCurrentSession();
 		
 		Post postToDelete = null;

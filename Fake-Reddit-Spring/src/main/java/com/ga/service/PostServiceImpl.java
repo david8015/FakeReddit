@@ -33,7 +33,7 @@ public class PostServiceImpl implements PostService{
 
 	@Override
 	public Long DeletePostById(Long postId) {
-		return postDao.DeletePostByPostId(postId);
+		return postDao.deletePostByPostId(postId);
 		
 	}
 

@@ -71,7 +71,7 @@ public class PostServiceTest {
 	public void deletePost_Sucess() {
 		Long postId = post.getId();
 
-		when(postDao.DeletePostByPostId(anyLong())).thenReturn(postId);
+		when(postDao.deletePostByPostId(anyLong())).thenReturn(postId);
 		Long expectedPostId = postService.DeletePostById(postId);
 		
 		assertNotNull(expectedPostId);

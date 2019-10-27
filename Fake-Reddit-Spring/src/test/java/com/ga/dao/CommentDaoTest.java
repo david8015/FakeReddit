@@ -1,6 +1,5 @@
-package com.ga.Dao;
+package com.ga.dao;
 
-import com.ga.dao.CommentDaoImpl;
 import com.ga.entity.Comment;
 import com.ga.entity.Post;
 import com.ga.entity.User;
@@ -95,5 +94,6 @@ public class CommentDaoTest {
             assertEquals(commentTestId, comment.getId());
 
         }
+
 
     }
