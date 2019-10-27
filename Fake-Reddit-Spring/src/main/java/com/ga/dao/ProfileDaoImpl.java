@@ -17,6 +17,7 @@ public class ProfileDaoImpl implements ProfileDao {
 
     @Override
     public Profile createUserProfile(String email, Profile profile) {
+
         User user = userDao.getUserByEmail(email);
 
         Session session = sessionFactory.getCurrentSession();
