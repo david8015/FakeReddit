@@ -16,7 +16,10 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 import org.junit.Before;
 
-import static org.mockito.ArgumentMatchers.*;
+;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 public class CommentDaoTest {
@@ -38,7 +41,6 @@ public class CommentDaoTest {
     @Mock
     User user;
 
-
     @InjectMocks
     private CommentDaoImpl commentDao;
 
@@ -57,8 +59,12 @@ public class CommentDaoTest {
         post.setTitle("test");
         post.setDescription("description");
 
+
         comment.setId(1L);
         comment.setDescription("description");
+
+        post.addComment(comment);
+        comment.setPost(post);
 
         when(sessionFactory.getCurrentSession()).thenReturn(session);
         when(session.getTransaction()).thenReturn(transaction);
@@ -67,11 +73,15 @@ public class CommentDaoTest {
     @Test
     public void createComment_Comment_Success(){
         String username = "username";
-        Long postid = 1l;
+        Long postid = 1L;
 
         when(session.createQuery(anyString())).thenReturn(query);
-        when(query.getSingleResult()).thenReturn(user);
-        when(session.get(anyLong()).thenReturn(post);
+        when(session.get(Post.class, 1L)).thenReturn(post);
+
+        Comment commentTest = commentDao.createComment(comment, username, postid);
+
+        assertNotNull("Test returned null object, expected non-null", commentTest);
+        assertEquals(commentTest, comment);
 
         }
 

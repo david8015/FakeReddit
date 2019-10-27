@@ -56,7 +56,7 @@ public class UserDaoTest {
 		user.setRole("userrole");
 		
 		when(sessionFactory.getCurrentSession()).thenReturn(session);
-	       when(session.getTransaction()).thenReturn(transaction);
+		when(session.getTransaction()).thenReturn(transaction);
 	}
 	
 	@Test
