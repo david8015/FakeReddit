@@ -2,7 +2,10 @@
 
 Contributors: David Hernandez & Benjamin Karasik
 
-FakeReddit functions as a backend for a reddit-like application called DC-IT that allows users to create, delete, update and see account information, posts, and comments. Utilizing Spring REST as the backbone Framework for this Java application, users could complete CRUD operations on various aspects for FakeReddit.
+FakeReddit functions as a backend for a reddit-like application called DC-IT 
+(Linked here: https://github.com/BenjaminKarasik28/DC-IT-clone) 
+
+It allows users to create, delete, update and see account information, posts, and comments. Utilizing Spring REST as the backbone Framework for this Java application, users could complete CRUD operations on various aspects for FakeReddit.
 
 The application structure is layered in a Spring format with entity, controller, service, and dao layers.
 
