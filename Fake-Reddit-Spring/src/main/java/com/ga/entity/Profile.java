@@ -8,9 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="profile")
+@Table(name="profile") //tells hibernate to create a table named profile
 public class Profile {
-	@Id
+	//@column - create a column in the table profile
+
+	@Id //mark this column as the primaryKey
 	@Column(name="profile_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long profileId;
@@ -27,11 +29,14 @@ public class Profile {
 	public Profile() {
 	}
 
-//	public Profile(int profileId, String mobile, String address) {
-//		this.profileId = profileId;
-//		this.mobile = mobile;
-//		this.address = address;
-//	}
+	public Profile(Long profileId, String mobile, String address) {
+		this.profileId = profileId;
+		this.mobile = mobile;
+		this.address = address;
+	}
+
+	//getters and setters
+
 
 	public Long getProfileId() {
 		return profileId;

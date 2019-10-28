@@ -9,12 +9,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ProfileDaoImpl implements ProfileDao {
-    @Autowired
-    UserDao userDao;
+//    @Autowired
+//    UserDao userDao;
 
+    //Injecting a session factory for database operations
     @Autowired
     private SessionFactory sessionFactory;
 
+    //create a user profile in the database
     @Override
     public Profile createUserProfile(String username, Profile profile) {
 
@@ -39,6 +41,7 @@ public class ProfileDaoImpl implements ProfileDao {
         return profile;
     }
 
+    //return the user profile of the specified user
     @Override
     public Profile getUserProfile(Long userId) {
         User user;
@@ -59,6 +62,7 @@ public class ProfileDaoImpl implements ProfileDao {
         }
     }
 
+    //delete a profile by the profile id
     @Override
     public Long deleteProfileById(Long profileId) {
         Session session = sessionFactory.getCurrentSession();
@@ -81,6 +85,7 @@ public class ProfileDaoImpl implements ProfileDao {
         return profileToDelete.getProfileId();
     }
 
+    //update a profile
     @Override
     public Profile updateProfile(Profile profile, Long profileId) {
         Profile profileToUpdate = null;

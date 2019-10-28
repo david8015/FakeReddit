@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Fake-Reddit-Spring:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d2ad8ac-0461-4dac-abda-7d9d0708c09f" name="Default Changelist" comment="">
+    <list default="true" id="a6af8aa1-fa1b-4840-bb72-8f395b34bf04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/dao/PostDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/dao/PostDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/dao/ProfileDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/dao/ProfileDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/entity/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/entity/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/service/ProfileServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,114 +23,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserServiceTest_getPostByUser_User_Success.ic" NAME="UserServiceTest.getPostByUser_User_Success Coverage Results" MODIFIED="1572122690396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest.ic" NAME="PostServiceTest Coverage Results" MODIFIED="1572115787583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest_createComment_comment_Success.ic" NAME="CommentServiceTest.createComment_comment_Success Coverage Results" MODIFIED="1572118846049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$ProfileServiceTest_getUserProfile_Profile_Success.ic" NAME="ProfileServiceTest.getUserProfile_Profile_Success Coverage Results" MODIFIED="1572120103143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$com_ga_Dao_in_Fake_Reddit_Spring.ic" NAME="com.ga.Dao in Fake-Reddit-Spring Coverage Results" MODIFIED="1572120760510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.Dao.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest_createComment_Comment_Success.ic" NAME="CommentServiceTest.createComment_Comment_Success Coverage Results" MODIFIED="1572119306366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest.ic" NAME="CommentServiceTest Coverage Results" MODIFIED="1572119327290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$ProfileServiceTest_deleteProfileById_Profile_Success.ic" NAME="ProfileServiceTest.deleteProfileById_Profile_Success Coverage Results" MODIFIED="1572120245063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_createPost_success.ic" NAME="PostServiceTest.createPost_success Coverage Results" MODIFIED="1572115753950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$ProfileServiceTest_createUserProfile_Profile_Success.ic" NAME="ProfileServiceTest.createUserProfile_Profile_Success Coverage Results" MODIFIED="1572119866537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1572120560358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_listPosts_Success.ic" NAME="PostServiceTest.listPosts_Success Coverage Results" MODIFIED="1572117493526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$CommentServiceTest_deleteByCommentId_Comment_Success.ic" NAME="CommentServiceTest.deleteByCommentId_Comment_Success Coverage Results" MODIFIED="1572119107618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$com_ga_controller_in_Fake_Reddit_Spring.ic" NAME="com.ga.controller in Fake-Reddit-Spring Coverage Results" MODIFIED="1572120709663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.controller.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserServiceTest_returnUserName_User_Success.ic" NAME="UserServiceTest.returnUserName_User_Success Coverage Results" MODIFIED="1572122090113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$com_ga_service_in_Fake_Reddit_Spring.ic" NAME="com.ga.service in Fake-Reddit-Spring Coverage Results" MODIFIED="1572120474536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserDaoTest.ic" NAME="UserDaoTest Coverage Results" MODIFIED="1572116647214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.Dao.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_deletePost_Sucess.ic" NAME="PostServiceTest.deletePost_Sucess Coverage Results" MODIFIED="1572115551368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserDaoTest_login_user_Success.ic" NAME="UserDaoTest.login_user_Success Coverage Results" MODIFIED="1572116639394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.Dao.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserDaoTest_signup_user_success.ic" NAME="UserDaoTest.signup_user_success Coverage Results" MODIFIED="1572120797440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.Dao.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$ProfileServiceTest_updateProfile_Profile_success.ic" NAME="ProfileServiceTest.updateProfile_Profile_success Coverage Results" MODIFIED="1572120448277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_getCommentsByPostId_Success.ic" NAME="PostServiceTest.getCommentsByPostId_Success Coverage Results" MODIFIED="1572117728285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$UserServiceTest_getCommentsByUser_User_Success.ic" NAME="UserServiceTest.getCommentsByUser_User_Success Coverage Results" MODIFIED="1572122383059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Fake_Reddit_Spring$PostServiceTest_upodatePost_success.ic" NAME="PostServiceTest.upodatePost_success Coverage Results" MODIFIED="1572115525333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ga.service.*</FILTER>
-    </SUITE>
-  </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="134" />
-  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/Dao/CommentDaoTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/entity/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/PostDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="510">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -126,17 +42,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ga/service/ProfileServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ga/service/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ga/Dao/CommentDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/controller/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/dao/PostDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/dao/ProfileDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/service/ProfileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ga/entity/Profile.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="66" />
+    <option name="y" value="23" />
+    <option name="width" value="1222" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -144,6 +71,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,106 +79,19 @@
               <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Reddit-Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Reddit-Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ga" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572123584446" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572229342586" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -265,299 +106,339 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.getPostByUser_User_Success">
-    <configuration name="UserDaoTest.signup_user_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.Dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.Dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.Dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="signup_user_success" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.10" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Fake_Reddit_Spring_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Fake-Reddit-Spring:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Fake_Reddit_Spring_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Fake-Reddit-Spring_6" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49483" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Fake-Reddit-Spring:war" />
+        </option>
       </method>
     </configuration>
-    <configuration name="UserServiceTest.getCommentsByUser_User_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="getCommentsByUser_User_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.getPostByUser_User_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="getPostByUser_User_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.returnUserName_User_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ga.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="returnUserName_User_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.ga.Dao in Fake-Reddit-Spring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fake-Reddit-Spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ga.Dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ga.Dao" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.UserServiceTest.getPostByUser_User_Success" />
-        <item itemvalue="JUnit.UserServiceTest.getCommentsByUser_User_Success" />
-        <item itemvalue="JUnit.UserServiceTest.returnUserName_User_Success" />
-        <item itemvalue="JUnit.UserDaoTest.signup_user_success" />
-        <item itemvalue="JUnit.com.ga.Dao in Fake-Reddit-Spring" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d2ad8ac-0461-4dac-abda-7d9d0708c09f" name="Default Changelist" comment="" />
-      <created>1572114156090</created>
+      <changelist id="a6af8aa1-fa1b-4840-bb72-8f395b34bf04" name="Default Changelist" comment="" />
+      <created>1572201099864</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572114156090</updated>
-      <workItem from="1572114157370" duration="9364000" />
+      <updated>1572201099864</updated>
+      <workItem from="1572201103000" duration="928000" />
+      <workItem from="1572202225407" duration="58000" />
+      <workItem from="1572225143576" duration="3510000" />
     </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1572114617655</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1572114617655</updated>
-    </task>
-    <task id="LOCAL-00002" summary="testing">
-      <created>1572115608252</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1572115608252</updated>
-    </task>
-    <task id="LOCAL-00003" summary="test get all post list">
-      <created>1572117346222</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1572117346222</updated>
-    </task>
-    <task id="LOCAL-00004" summary="test get comments by post id">
-      <created>1572117782785</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1572117782785</updated>
-    </task>
-    <task id="LOCAL-00005" summary="test comment service layer">
-      <created>1572119354763</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1572119354763</updated>
-    </task>
-    <task id="LOCAL-00006" summary="passing all profile service methods tests">
-      <created>1572120523570</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1572120523570</updated>
-    </task>
-    <task id="LOCAL-00007" summary="user service test">
-      <created>1572122725265</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1572122725265</updated>
-    </task>
-    <task id="LOCAL-00008" summary="user dao test">
-      <created>1572123565220</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1572123565220</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 30m 45s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 31m 27s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 31m 46s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 32m 33s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 32m 48s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 33m 09s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_returnUserName_User_Success - 2019.10.26 at 16h 34m 52s.xml">
-      <configuration name="UserServiceTest.returnUserName_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_getCommentsByUser_User_Success - 2019.10.26 at 16h 39m 45s.xml">
-      <configuration name="UserServiceTest.getCommentsByUser_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_getPostByUser_User_Success - 2019.10.26 at 16h 42m 54s.xml">
-      <configuration name="UserServiceTest.getPostByUser_User_Success" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_getPostByUser_User_Success - 2019.10.26 at 16h 44m 52s.xml">
-      <configuration name="UserServiceTest.getPostByUser_User_Success" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9364000" />
+    <option name="totallyTimeSpent" value="4496000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="92" y="23" width="1222" height="800" extended-state="0" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2584746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37228915" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info active="true" anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.27825466" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32909605" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32909605" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" visible="true" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
-    <MESSAGE value="testing" />
-    <MESSAGE value="test get all post list" />
-    <MESSAGE value="test get comments by post id" />
-    <MESSAGE value="test comment service layer" />
-    <MESSAGE value="passing all profile service methods tests" />
-    <MESSAGE value="user service test" />
-    <MESSAGE value="user dao test" />
-    <option name="LAST_COMMIT_MESSAGE" value="user dao test" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="120">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/controller/CommentControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/controller/PostControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/controller/ProfileControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/controller/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/dao/CommentDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/dao/PostDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/dao/ProfileDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/dao/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/ProfileServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/controller/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="40" column="81" lean-forward="true" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/CommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/entity/JwtResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/entity/Post.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/CommentService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/ProfileDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="1230">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/CommentServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/PostDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="1140">
+          <caret line="86" column="32" lean-forward="true" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/CommentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/entity/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="50" column="97" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/ProfileServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="92" column="47" lean-forward="true" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
         </state>
       </provider>
     </entry>
@@ -568,48 +449,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/ProfileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="390">
+          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/Dao/UserDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/CommentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="65" column="36" lean-forward="true" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+        <state relative-caret-position="189">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/service/PostServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/entity/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ga/dao/PostDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/service/PostServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ga/Dao/CommentDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
@@ -627,83 +484,9 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>Fake-Reddit-Spring:war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Fake-Reddit-Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

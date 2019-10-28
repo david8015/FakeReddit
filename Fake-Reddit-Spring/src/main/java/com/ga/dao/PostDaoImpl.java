@@ -14,10 +14,14 @@ import com.ga.entity.Post;
 
 @Repository
 public class PostDaoImpl implements PostDao{
-	
+	//	@Autowired
+    //	UserDao userDao;
+
+	//Injecting a session factory for database operations
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	//query the database and return a list of all posts
 	@Override
 	public List<Post> listPosts() {
 
@@ -36,9 +40,7 @@ public class PostDaoImpl implements PostDao{
 		return allPosts;
 	}
 
-	@Autowired
-	UserDao userDao;
-
+	//creates a post in database and links it to user by userId
 	@Override
 	public Post createPost(Post post, String username) {
 		User user = null;
@@ -60,6 +62,7 @@ public class PostDaoImpl implements PostDao{
 		return post;
 	}
 
+	//deletes a post in database by postId
 	@Override
 	public Long deletePostByPostId(Long postId) {
 
@@ -81,6 +84,7 @@ public class PostDaoImpl implements PostDao{
 		return postToDelete.getId();
 	}
 
+	//updates a post in database
 	@Override
 	public Post updatePost(Post post, Long postId) {
 		Post postToUpdate = null;
@@ -102,6 +106,7 @@ public class PostDaoImpl implements PostDao{
 		return postToUpdate;
 	}
 
+	//query database and return a list of comments for the specified post (postId)
 	@Override
 	public List<Comment> getCommentsByPostId(Long postId) {
 		List<Comment> commentList = null;
