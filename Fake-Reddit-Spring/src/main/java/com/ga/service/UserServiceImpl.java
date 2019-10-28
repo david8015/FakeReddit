@@ -102,15 +102,17 @@ public class UserServiceImpl implements UserService {
          return null;
      }
 
+     //used to return the username of a user
      public String returnUsername(){
          return username;
      }
-
+    //calls userDao.getCommentsByUSer by sending it the userId
     @Override
     public List<Comment> getCommentsByUser(Long userId ) {
         return userDao.getCommentByUser(userId);
     }
 
+    //calls userDao.getPostsByUser by sending it the userId
     @Override
     public List<Post> getPostsByUser(Long userId) {
         return userDao.gePostsByUser(userId);

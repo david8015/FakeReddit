@@ -46,17 +46,20 @@ public class UserDaoTest {
 	@Mock
 	Query<User> query;
 
-	@Mock
+	@InjectMocks
 	private User user;
 
 	@Mock
-	List<Comment> commentList;
+	private List<Comment> comments;
 
 	@InjectMocks
-	Comment comment;
+	private Comment comment;
 
 	@Mock
-	List<Post> postList;
+	private List<Post> posts;
+
+	@InjectMocks
+	private Post post;
 
 
 	@Before
@@ -66,7 +69,21 @@ public class UserDaoTest {
 		user.setUsername("king");
 		user.setPassword("password");
 		user.setRole("userrole");
-		commentList.add(comment);
+		post.setId(1L);
+		post.setTitle("test");
+		post.setDescription("description");
+
+		comment.setId(1L);
+		comment.setDescription("description");
+		comment.setPost(post);
+
+		post.addComment(comment);
+
+		comments.add(comment);
+		user.setUserId(1L);
+		user.setUsername("username");
+		post.setUser(user);
+		posts.add(post);
 
 
 		when(sessionFactory.getCurrentSession()).thenReturn(session);
@@ -93,15 +110,14 @@ public class UserDaoTest {
 		assertEquals(savedUser, user);
 	}
 
-//	@Test
-//	public void getUserByEmail_user_success(){
-//		when(session.createQuery(anyString())).thenReturn(query);
-//		when(query.getSingleResult()).thenReturn(user);
-//		User searchedUser = userDao.getUserByEmail(user.getEmail());
-//
-//		assertNotNull("expected not null", searchedUser);
-//		assertEquals(user, searchedUser);
-//	}
+	@Test
+	public void getUserByEmail_user_success(){
+		when(session.createQuery(anyString())).thenReturn(query);
+		when(query.getSingleResult()).thenReturn(user);
+		User searchedUser = userDao.getUserByEmail("test");
+		assertEquals(searchedUser, user);
+		assertNotNull("Test returned null object, expected non-null", searchedUser);
+	}
 
 	@Test
 	public void getCommentByUserId_User_Sucess(){

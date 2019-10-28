@@ -85,9 +85,9 @@ public class ProfileControllerTest {
     }
 
     @Test
-    public void createProfileByEmail_Profile_Success() throws Exception {
+    public void createProfileByUsername_Profile_Success() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .post("/profile/user/test@email.com")
+                .post("/profile/user/test")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(createProfileInJson(profile.getMobile(), profile.getAddress()));
         when(profileService.createUserProfile(anyString(), any())).thenReturn(profile);
