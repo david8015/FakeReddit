@@ -16,18 +16,15 @@ import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
-	
+
+	//Injecting a session factory for database operations
 	@Autowired
 	SessionFactory sessionFactory;
-	
-//	@Autowired
-//	UserRoleDao userRoleDao;
-//
+
+	//Adds new user to database
+	//assigns every user a role of USER automatically
 	@Override
 	public User signup(User user) {
-		//String roleName = user.getUserRole().getName();
-		
-		//UserRole userRole = userRoleDao.getRole(roleName);
 		
 		Session session = sessionFactory.getCurrentSession();
 		
@@ -45,7 +42,8 @@ public class UserDaoImpl implements UserDao {
 		
 		return user;
 }
-
+	//Fetches a user from the database by email
+	//Used in service layer
 	@Override
 	public User getUserByEmail(String email) {
 		User user = null;
@@ -63,6 +61,8 @@ public class UserDaoImpl implements UserDao {
 		return user;
 	}
 
+	//returns a user from a database
+	//takes in email and password from controller
 	@Override
 	public User login(User user) {
 		User savedUser = null;
@@ -80,6 +80,9 @@ public class UserDaoImpl implements UserDao {
 		return savedUser;
 	}
 
+	//Returns a list of comments by userId
+	//loads user then uses the getComments() method on that user
+	//Hibernate.initialize() circumvents lazy loading
 	@Override
 	public List<Comment> getCommentByUser(Long userId ) {
 		List<Comment> commentList = null;
@@ -96,11 +99,11 @@ public class UserDaoImpl implements UserDao {
 		} finally {
 			session.close();
 		}
-
-
 		return commentList;
 	}
-
+	//Returns a list of posts by userId
+	//loads user then uses the getPosts() method on that user
+	//Hibernate.initialize() circumvents lazy loading
 	@Override
 	public List<Post> gePostsByUser(Long userId) {
 		List<Post> postList= null;
@@ -117,8 +120,6 @@ public class UserDaoImpl implements UserDao {
 		} finally {
 			session.close();
 		}
-
-
 		return postList;
 	}
 }

@@ -12,9 +12,12 @@ import com.ga.entity.User;
 @Repository
 public class CommentDaoImpl implements CommentDao {
 
+	//Injecting a session factory for database operations
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	//creates a comment in database and links it to user by username and post by postId
+	//links comment to user and post using entity setter() methods and getComments() method
 	@Override
 	public Comment createComment(Comment comment, String username, Long postId) {
 		Session session = sessionFactory.getCurrentSession();
@@ -34,6 +37,7 @@ public class CommentDaoImpl implements CommentDao {
 			comment.setPost(postCommentedOn);
 
 			postCommentedOn.getComments().add(comment);
+			userCommenting.getComments().add(comment);
 
 			session.save(comment);
 
@@ -45,6 +49,7 @@ public class CommentDaoImpl implements CommentDao {
 		return comment;
 	}
 
+	//delete comment in database by commentId
 	@Override
 	public Long deleteCommentById(Long commentId) {
 		Session session = sessionFactory.getCurrentSession();
@@ -65,6 +70,7 @@ public class CommentDaoImpl implements CommentDao {
 		return commentToDelete.getId();
 	}
 
+	//update comment's description in database by its id
 	@Override
 	public Comment updateComment(Comment comment, Long commentId) {
 		Comment commentToUpdate = null;

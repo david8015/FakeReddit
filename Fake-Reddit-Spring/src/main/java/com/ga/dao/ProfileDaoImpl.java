@@ -18,7 +18,7 @@ public class ProfileDaoImpl implements ProfileDao {
     @Override
     public Profile createUserProfile(String username, Profile profile) {
 
-        User user;
+        User user=null;
 
         Session session = sessionFactory.getCurrentSession();
 
@@ -90,7 +90,7 @@ public class ProfileDaoImpl implements ProfileDao {
             session.beginTransaction();
             profileToUpdate = session.get(Profile.class, profileId);
             profileToUpdate.setAddress(profile.getAddress());
-            profileToUpdate.setMobile(profile.getAddress());
+            profileToUpdate.setMobile(profile.getMobile());
 
 
             session.update(profileToUpdate);
