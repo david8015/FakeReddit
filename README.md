@@ -6,7 +6,7 @@ FakeReddit functions as a backend for a reddit-like application called DC-IT tha
 
 The application structure is layered in a Spring format with entity, controller, service, and dao layers.
 
-The database is local per machine and utilizes Postgres for storing tables; hibernate accomplishes much of the transactions happening from user to database.
+The database is local per machine and utilizes Postgres for storing tables; hibernate completes the transactions happening from user to database nd vice-versa
 
 Postman was used to test endpoints and application accuracy.
 
