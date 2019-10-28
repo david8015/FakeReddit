@@ -20,7 +20,7 @@ Mockito was used for JUNIT testing.
     - Seen during user Story creation, monolith structure design, implementing app layers
     - Pair programming also achieved when developers had questions about partner code and explanation was required
     - Extreme Programming achieved with daily stand-ups, basic endpoint acceptance tests, pair programming, and pair                negotiation
-    - Agile methodlogies achieved with over 95 commits on Github and development of multiple, small aspects of MVP daily
+    - Agile methodlogies achieved with over 100 commits on Github and development of multiple, small aspects of MVP daily
     - Test Driven Development
     
     
@@ -76,6 +76,7 @@ With those deliverables in mind we went to Pivotal Tracker and developed epics a
 2. Pair Programing
 3. Well layered application without much dependancy unless required
 4. Over 70% test coverage on entire application (percentage includes config package)
+5. No merge conflicts on over 100 commits
 
 
 # Project Structure
