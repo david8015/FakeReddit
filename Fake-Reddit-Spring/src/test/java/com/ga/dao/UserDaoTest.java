@@ -27,7 +27,8 @@ import com.ga.entity.User;
 import java.util.List;
 
 public class UserDaoTest {
-	
+
+	//Initial Injections
 	@Rule
 	public MockitoRule rule = MockitoJUnit.rule();
 
@@ -62,6 +63,7 @@ public class UserDaoTest {
 	private Post post;
 
 
+	//initializes objects and mock tests
 	@Before
 	public void initializeDummyObjects() {
 		user.setUserId(1L);
@@ -89,7 +91,7 @@ public class UserDaoTest {
 		when(sessionFactory.getCurrentSession()).thenReturn(session);
 		when(session.getTransaction()).thenReturn(transaction);
 	}
-	
+	//calls userdao.signup() and tests if it returns a valid user
 	@Test
 	public void signup_user_success() {
 		User savedUser = userDao.signup(user);
@@ -98,7 +100,7 @@ public class UserDaoTest {
 		
 		assertEquals(savedUser, user);
 	}
-	
+	//calls userdao.login() and tests if it returns a valid user
 	@Test
 	public void login_user_Success() {
 		when(session.createQuery(anyString())).thenReturn(query);
@@ -110,6 +112,7 @@ public class UserDaoTest {
 		assertEquals(savedUser, user);
 	}
 
+	//calls userdao.getUserByEmail() and tests if it returns a valid user
 	@Test
 	public void getUserByEmail_user_success(){
 		when(session.createQuery(anyString())).thenReturn(query);
@@ -118,14 +121,14 @@ public class UserDaoTest {
 		assertEquals(searchedUser, user);
 		assertNotNull("Test returned null object, expected non-null", searchedUser);
 	}
-
+	//calls userdao.getCommentByUser() and tests if it returns a valid comment list
 	@Test
 	public void getCommentByUserId_User_Sucess(){
 		when(session.get(User.class, 1L)).thenReturn(user);
 		List<Comment> comments = userDao.getCommentByUser(1L);
 		assertNotNull("Test returned null object, expected non-null", comments);
 	}
-
+	//calls userdao.gePostsByUser() and tests if it returns a valid post list
 	@Test
 	public void getPostsByUserId_Success(){
 		when(session.get(User.class, 1L)).thenReturn(user);

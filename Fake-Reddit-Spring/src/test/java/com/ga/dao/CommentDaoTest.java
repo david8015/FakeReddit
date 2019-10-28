@@ -22,6 +22,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 public class CommentDaoTest {
+    //initial injections and mocks
     @Rule
     public MockitoRule rule = MockitoJUnit.rule();
 
@@ -46,6 +47,7 @@ public class CommentDaoTest {
     @Mock
     Query<User> query;
 
+    //initializes objects and mock tests
     @Before
     public void init() {
         post.setId(1L);
@@ -61,9 +63,9 @@ public class CommentDaoTest {
 
         when(sessionFactory.getCurrentSession()).thenReturn(session);
         when(session.getTransaction()).thenReturn(transaction);
-        //hen()
-    }
 
+    }
+    //calls commentDao.createComment and tests if it returns a valid comment
     @Test
     public void createComment_Comment_Success(){
         String username = "username";
@@ -78,6 +80,7 @@ public class CommentDaoTest {
         assertEquals(commentTest, comment);
 
         }
+    //calls commentDao.updateComment and tests if it returns a valid comment
     @Test
     public void updateComment_Comment_Success(){
 
@@ -87,6 +90,7 @@ public class CommentDaoTest {
         assertEquals(commentTest, comment);
 
         }
+    //calls commentDao.deleteComment() and tests if it returns a valid Long for that comment
     @Test
     public void deleteComment_Comment_Success(){
         when(session.get(Comment.class, 1L)).thenReturn(comment);

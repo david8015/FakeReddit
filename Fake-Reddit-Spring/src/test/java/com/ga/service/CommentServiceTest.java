@@ -14,6 +14,8 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 public class CommentServiceTest {
+
+    //Initial injections and mocks
     @Mock
     CommentDao commentDao;
 
@@ -38,13 +40,14 @@ public class CommentServiceTest {
         comment.setId(1L);
         comment.setDescription("description");
     }
-
+    //calls commentService.createComment and passes it a comment and postId expecting a comment
+    //mocks dao layer methods
     @Test
     public void createComment_comment_Success(){
-        Long postId = 2l;
+
         String username = "username";
 
-        Comment expectedComment = null;
+        Comment expectedComment;
 
         when(userService.returnUsername()).thenReturn(username);
 
@@ -58,6 +61,8 @@ public class CommentServiceTest {
 
     }
 
+    //calls commentService.deleteCommentById and passes it a commentId expecting a Long commentId
+    //mocks dao layer methods
     @Test
     public void deleteByCommentId_Comment_Success(){
         Long commentId = 1L;
@@ -71,10 +76,11 @@ public class CommentServiceTest {
         assertEquals(expectedId, commentId);
 
     }
-
+    //calls commentService.updateComment and passes it a comment and commentId expecting a comment object
+    //mocks dao layer methods
     @Test
     public void createComment_Comment_Success(){
-        Long commentId = 1l;
+        Long commentId = 1L;
 
         when(commentDao.updateComment(any(), anyLong())).thenReturn(comment);
 
