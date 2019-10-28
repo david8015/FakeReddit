@@ -37,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	UserService userService;
 
+	//allows for cors configurations
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
@@ -54,7 +55,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userService);
 	}
-	
+
+	//enables certain endpoints to run with/without authorization
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()

@@ -39,19 +39,16 @@ public class JwtUtil implements Serializable {
         return claimsResolver.apply(claims);
     }
 
-    // We'll again use the secret key to get the username from the token.
     private Claims getAllClaimsFromToken(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
 
-    // Check both expiry and the username received from the token to validate it.
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String email = getEmailFromToken(token);
 
         return (email.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    // Verify if the token has expired.
     private Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
 
