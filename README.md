@@ -16,7 +16,8 @@ Mockito was used for JUNIT testing.
 
 ## 1. Pair-Programming, Agile methodologies, and Extreme Programming Approaches
     - Constant, daily meetings between developers in person and over Slack
-    - In person, pair programming achieved during 90% of development; seen suring user Story creation, monotlith structure           design, implementing app layers
+    - In person, pair programming achieved during 90% of development
+    - Seen during user Story creation, monolith structure design, implementing app layers
     - Pair programming also achieved when developers had questions about partner code and explanation was required
     - Extreme Programming achieved with daily stand-ups, basic endpoint acceptance tests, pair programming, and pair                negotiation
     - Agile methodlogies achieved with over 95 commits on Github and development of multiple, small aspects of MVP daily
@@ -25,7 +26,7 @@ Mockito was used for JUNIT testing.
     
 ## 2. Development Approaches
     - Created a Github repository
-    - Worked on Master and seperate branches -- whenever a merge request was needed, developers met in person to achieve this
+    - Worked on Master and seperate branches 
     - Used Spring REST structure
     - Created seperate folder structure for entity, controller, service, and dao packages
     - Loose dependency and dependency injection used within Spring
