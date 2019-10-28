@@ -116,7 +116,7 @@ public class UserControllerTest {
 
     }
 
-    //Tests expects a jwt token 
+    //Tests expects a jwt token after sending in a user obj that's created in json
     @Test
     public void signup_User_Success() throws Exception{
         RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -131,7 +131,7 @@ public class UserControllerTest {
                 .andExpect(content().json("{\"token\":\"2468\"}"));
 
     }
-
+    //Tests expects a serialized response object after sending in a user obj that's created in json
     @Test
     public void login_User_Success() throws Exception{
         response.setToken("king");
@@ -150,14 +150,14 @@ public class UserControllerTest {
 
 
     }
-    
+    //Json-ifies objects in strings for parsing
     private static String createUserInJson(String username, String password, String email){
         return "{\"username\":\"" + username + "\", " +
                 "\"password\":\"" + password + "\", " +
                 "\"email\":\"" + email + "\"}";
     }
 
-
+    //Json-ifies objects in strings for parsing
     public static String createResponseInJson(String token, String username){
         return  "{\"token\":\"" + token + "\", " +
                     "\"username\":\"" + username + "\"}";

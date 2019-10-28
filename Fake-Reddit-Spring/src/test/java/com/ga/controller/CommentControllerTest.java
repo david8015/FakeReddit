@@ -111,6 +111,7 @@ public class CommentControllerTest {
                 .andExpect(content().json("1"));
     }
 
+    //Json-ifies objects in strings for parsing
     public static String createCommentInJson( String description){
         return "{\"description\":\"" + description + "\"}";
 
