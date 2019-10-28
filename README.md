@@ -88,7 +88,7 @@ Wednesday: Debugging, Response entity added, testing with Postman
 Thursday: Connect application to working front end with api calls
 Friday-Sunday: Testing, completing ReadMe
 
-# Methodology
+# Methodologies
 
 Agile Development and Extreme Programming
 
