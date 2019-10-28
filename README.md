@@ -63,7 +63,7 @@ With those deliverables in mind we went to Pivotal Tracker and developed epics a
 
 # Challenges / Areas of Opportunity 
 
-1. Applying the new, backend api calls to already created fornt end DC-IT application
+1. Applying the new, backend api calls to already created front end DC-IT application
 2. Using Mockito to unit test each layer (Entity, Controller, Service, Dao)
 3. Code refactoring needs to be done
 4. Could add exception handling
@@ -75,7 +75,7 @@ With those deliverables in mind we went to Pivotal Tracker and developed epics a
 1. Open and Honest Communication
 2. Pair Programing
 3. Well layered application without much dependancy unless required
-4. Over 70% test coverage on entire application (which includes config package)
+4. Over 70% test coverage on entire application (percentage includes config package)
 
 
 # Project Structure
