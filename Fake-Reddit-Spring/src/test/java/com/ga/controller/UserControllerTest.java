@@ -32,6 +32,7 @@ import java.util.List;
 @RunWith(MockitoJUnitRunner.class) //execute JUnit using Mockito's testing support
 public class UserControllerTest {
 
+    //Initial injections for Mock testing
     private MockMvc mockMvc;
 
     @Mock
@@ -58,6 +59,7 @@ public class UserControllerTest {
     @Mock
     List<Post> postList;
 
+    //Inital objects and tests set up
     @Before
     public void init(){
         mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
@@ -78,6 +80,7 @@ public class UserControllerTest {
         user.setPosts(postList);
     }
 
+    //Tests expects a list of serialized comments when sending in a user id
     @Test
     public void getCommentByUserId_User_Success() throws Exception {
 
@@ -95,6 +98,7 @@ public class UserControllerTest {
 
     }
 
+    //Tests expects a list of serialized posts when sending in a user id
     @Test
     public void getPostsUserId_User_Success() throws Exception {
 
@@ -112,6 +116,7 @@ public class UserControllerTest {
 
     }
 
+    //Tests expects a jwt token 
     @Test
     public void signup_User_Success() throws Exception{
         RequestBuilder requestBuilder = MockMvcRequestBuilders

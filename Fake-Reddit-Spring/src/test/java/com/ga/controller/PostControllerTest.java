@@ -47,8 +47,8 @@ public class PostControllerTest {
 	@InjectMocks
 	Comment comment;
 	
-	List<Comment> comments;
-	List<Post> posts;
+	private List<Comment> comments;
+	private List<Post> posts;
 
 	@Mock
 	PostService postService;

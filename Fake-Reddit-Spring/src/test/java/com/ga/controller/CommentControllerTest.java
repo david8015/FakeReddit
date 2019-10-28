@@ -33,6 +33,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RunWith(MockitoJUnitRunner.class)
 public class CommentControllerTest {
 
+    //Initial injections for Mock testing
+
     private MockMvc mockMvc;
 
     @InjectMocks
@@ -47,15 +49,14 @@ public class CommentControllerTest {
     @InjectMocks
     Comment comment;
 
-    List<Comment> comments;
-
+    //initializes certain objects and tests
     @Before
     public void init() {
 
         mockMvc = MockMvcBuilders.standaloneSetup(commentController).build();
         post = new Post();
         comment = new Comment();
-        comments = new ArrayList<>();
+        List<Comment> comments = new ArrayList<>();
 
         comment.setId(1L);
         comment.setDescription("some comment");
@@ -67,6 +68,7 @@ public class CommentControllerTest {
         post.addComment(comment);
     }
 
+    //Test expects a serialized comment based on post id
     @Test
     public void createComment_Comment_Success() throws Exception{
         RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -82,8 +84,9 @@ public class CommentControllerTest {
 
     }
 
+    //Test expects a serialized comment that is updated from the original based on comment id
     @Test
-    public void updatePost_Post_Success() throws Exception{
+    public void updateComment_Comment_Success() throws Exception{
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .put("/comment/1")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -97,8 +100,9 @@ public class CommentControllerTest {
                 .andExpect(content().string(commentMapper));
     }
 
+    //Test expects a Long after comment is deleted by id
     @Test
-    public void deletePost_Post_Success() throws Exception{
+    public void deleteComment_Comment_Success() throws Exception{
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .delete("/comment/1");
         when(commentService.deleteCommentById(anyLong())).thenReturn(1L);
