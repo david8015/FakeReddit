@@ -26,7 +26,7 @@ public class ProfileDaoImpl implements ProfileDao {
             session.beginTransaction();
 
             user = (User) session.createQuery("FROM User u where u.username = '" +
-                    username + "'").uniqueResult();
+                    username + "'").getSingleResult();
             session.save(profile);
             user.setProfile(profile);
             session.update(user);

@@ -46,14 +46,14 @@ public class UserDaoImpl implements UserDao {
 	//Used in service layer
 	@Override
 	public User getUserByEmail(String email) {
-		User user = null;
+		User user;
 		
 		Session session = sessionFactory.getCurrentSession();
 		
 		try {
 			session.beginTransaction();
 			user = (User) session.createQuery("FROM User u where u.email = '" + 
-			email + "'").uniqueResult();
+			email + "'").getSingleResult();
 		}finally {
 			session.close();
 		}
